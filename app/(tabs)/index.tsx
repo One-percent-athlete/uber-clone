@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet, Platform } from 'react-native';
+import { View, Text, Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,7 +7,9 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <View className="w-10 h-10 bg-blue-500" />
+    <View className="text-red-500">
+      <Text>Hello, World!</Text>
+    </View>
   );
 }
 
