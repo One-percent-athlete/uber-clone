@@ -7,7 +7,7 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <View style={{ $$css: true, test: "w-10 h-10 bg-blue-500" }} />
+    <View className="w-10 h-10 bg-blue-500" />
   );
 }
 
