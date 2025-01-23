@@ -1,10 +1,11 @@
-import { View, Text, Image, StyleSheet, Platform } from 'react-native';
+import { View, Text, StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <View className="text-red-500">
+    <SafeAreaView className="text-red-500">
       <Text>Hello, World!</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
