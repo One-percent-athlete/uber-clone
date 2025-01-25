@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import Swiper from "react-native-swiper";
 import { SafeAreaView, Text, Touchable, TouchableOpacity } from "react-native";
 
 const Onboarding = () => {
@@ -12,6 +13,10 @@ const Onboarding = () => {
       >
         <Text className="text-black text-md font-JakartaBold">Skip</Text>
       </TouchableOpacity>
+
+      <Swiper>
+        
+      </Swiper>
     </SafeAreaView>
   );
 };
