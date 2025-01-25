@@ -1,10 +1,10 @@
 import { SafeAreaView, Text } from "react-native";
 
-const Home = () => {
+const SignIn = () => {
   return (
     <SafeAreaView>
-      <Text>Sign in</Text>
+      <Text>Sign In</Text>
     </SafeAreaView>
   );
 };
-export default Home;
+export default SignIn;

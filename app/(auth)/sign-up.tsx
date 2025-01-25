@@ -3,7 +3,7 @@ import { SafeAreaView, Text } from "react-native";
 const SignUp = () => {
   return (
     <SafeAreaView>
-      <Text>Sign Upp</Text>
+      <Text>Sign Up</Text>
     </SafeAreaView>
   );
 };
