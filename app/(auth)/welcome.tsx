@@ -17,7 +17,7 @@ const Onboarding = () => {
         <Text className="text-black text-md font-JakartaBold">Skip</Text>
       </TouchableOpacity>
 
-      <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-2 h-2 bg-black rounded-full mx-2" />}>
+      <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />}>
         
       </Swiper>
     </SafeAreaView>
