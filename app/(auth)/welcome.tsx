@@ -6,6 +6,7 @@ import { useRef } from "react";
 
 const Onboarding = () => {
   const swiperRef = useRef<Swiper>(null);
+  const const [activeIndex, setActiveIndex] = useState(0)
   return (
     <SafeAreaView className="flex w-full items-center justify-between bg-white">
       <TouchableOpacity
