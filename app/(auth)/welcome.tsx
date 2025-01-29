@@ -2,6 +2,8 @@ import { router } from "expo-router";
 import Swiper from "react-native-swiper";
 import { SafeAreaView, Text, TouchableOpacity } from "react-native";
 import { useRef } from "react";
+import { onboarding } from "@/constants";
+import { View } from "react-native-reanimated/lib/typescript/Animated";
 
 
 const Onboarding = () => {
@@ -19,32 +21,10 @@ const Onboarding = () => {
       </TouchableOpacity>
 
       <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />} onIndexChanged={(index) => {setActiveIndex(index)}}>
-        [{
-          title,
-          image,
-          description
-        }
-        {
-          title,
-          image,
-          description
-        }
-        {
-          title,
-          image,
-          description
-        }
-        {
-          title,
-          image,
-          description
-        }
-        {
-          title,
-          image,
-          description
-        }
-        ].map(({ title, image, description }) => (
+
+      {onboarding.map((item) => (
+        <View>{item.title}</View>
+      ))}
       </Swiper>
     </SafeAreaView>
   );
