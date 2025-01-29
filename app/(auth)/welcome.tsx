@@ -24,27 +24,27 @@ const Onboarding = () => {
           image,
           description
         }
-        [{
+        {
           title,
           image,
           description
         }
-        [{
+        {
           title,
           image,
           description
         }
-        [{
+        {
           title,
           image,
           description
         }
-        [{
+        {
           title,
           image,
           description
         }
-        ]
+        ].map(({ title, image, description }) => (
       </Swiper>
     </SafeAreaView>
   );
