@@ -1,8 +1,10 @@
 import { router } from "expo-router";
 import Swiper from "react-native-swiper";
 import { SafeAreaView, Text, Touchable, TouchableOpacity } from "react-native";
+import { useRef } from "react";
 
 const Onboarding = () => {
+  const swiperRef = useRef<Swiper>(null);
   return (
     <SafeAreaView className="flex w-full items-center justify-between bg-white">
       <TouchableOpacity
@@ -14,7 +16,7 @@ const Onboarding = () => {
         <Text className="text-black text-md font-JakartaBold">Skip</Text>
       </TouchableOpacity>
 
-      <Swiper>
+      <Swiper ref={swiperRef} loop={false}>
         
       </Swiper>
     </SafeAreaView>
