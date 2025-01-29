@@ -19,7 +19,32 @@ const Onboarding = () => {
       </TouchableOpacity>
 
       <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />} onIndexChanged={(index) => {setActiveIndex(index)}}>
-        
+        [{
+          title,
+          image,
+          description
+        }
+        [{
+          title,
+          image,
+          description
+        }
+        [{
+          title,
+          image,
+          description
+        }
+        [{
+          title,
+          image,
+          description
+        }
+        [{
+          title,
+          image,
+          description
+        }
+        ]
       </Swiper>
     </SafeAreaView>
   );
