@@ -1,7 +1,8 @@
 import { router } from "expo-router";
 import Swiper from "react-native-swiper";
-import { SafeAreaView, Text, Touchable, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, TouchableOpacity } from "react-native";
 import { useRef } from "react";
+
 
 const Onboarding = () => {
   const swiperRef = useRef<Swiper>(null);
