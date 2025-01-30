@@ -41,6 +41,9 @@ const Onboarding = () => {
                 {item.title}
               </Text>
             </View>
+            <Text className="text-md font-JakartaSemiBold text-center text-[#858585] mx-10">
+              {item.description}
+            </Text>
           </View>
         ))}
       </Swiper>
