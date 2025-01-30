@@ -37,7 +37,7 @@ const Onboarding = () => {
               resizeMode="contain"
             />
             <View className="flex flex-row items-center justify-center w-full mt-10">
-              <Text>
+              <Text className="text-black text-3xl font-bold mx-10 text-center">
                 {item.title}
               </Text>
             </View>
