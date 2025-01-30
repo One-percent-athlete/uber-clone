@@ -36,9 +36,11 @@ const Onboarding = () => {
               style={{ width: "100%", height: 300 }}
               resizeMode="contain"
             />
-            <Text>
-              {item.title}
-            </Text>
+            <View className="flex flex-row items-center justify-center w-full mt-10">
+              <Text>
+                {item.title}
+              </Text>
+            </View>
           </View>
         ))}
       </Swiper>
