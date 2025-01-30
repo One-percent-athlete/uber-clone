@@ -21,16 +21,26 @@ const Onboarding = () => {
         <Text className="text-black text-md font-JakartaBold">Skip</Text>
       </TouchableOpacity>
 
-      <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />} onIndexChanged={(index) => {setActiveIndex(index)}}>
-
-      {onboarding.map((item) => (
-        <View key={item.id} className="flex items-center justify-center p-5">
-          <Image source={item.image} style={{ width: '100%', height: 300 }} resizeMode="contain" />
-          <Text>
-            {item.title}
-          </Text>
-        </View>
-      ))}
+      <Swiper
+        ref={swiperRef}
+        loop={false}
+        dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />}
+        activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />}
+        onIndexChanged={(index) => {
+          setActiveIndex(index);
+        }}>
+        {onboarding.map((item) => (
+          <View key={item.id} className="flex items-center justify-center p-5">
+            <Image
+              source={item.image}
+              style={{ width: "100%", height: 300 }}
+              resizeMode="contain"
+            />
+            <Text>
+              {item.title}
+            </Text>
+          </View>
+        ))}
       </Swiper>
     </SafeAreaView>
   );
