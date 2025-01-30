@@ -23,7 +23,7 @@ const Onboarding = () => {
       <Swiper ref={swiperRef} loop={false} dot={<View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0]" />} activeDot={<View className="w-[32px] h-[4px] mx-1 bg-[#0286FF]" />} onIndexChanged={(index) => {setActiveIndex(index)}}>
 
       {onboarding.map((item) => (
-        <View>
+        <View key={item.id} className="flex items-center justify-center p-5">
           <Text>
             {item.title}
           </Text>
