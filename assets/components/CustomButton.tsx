@@ -8,9 +8,11 @@ const CustomButton = ({
   IconLeft,
   IconRight,
   className,
+  ...props
 }) => (
   <TouchableOpacity onPress={onPress}>
-    <Text>Press me</Text>
+    {IconLeft && <IconLeft />}
+    {IconRight && <IconRight />}
   </TouchableOpacity>
 )
 
