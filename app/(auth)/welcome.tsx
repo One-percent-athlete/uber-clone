@@ -4,6 +4,7 @@ import { SafeAreaView, Text, TouchableOpacity, Image } from "react-native";
 import { useRef, useState } from "react";
 import { onboarding } from "@/constants";
 import { View } from "react-native-reanimated/lib/typescript/Animated";
+import CustomButton from "@/assets/components/CustomButton";
 
 
 const Onboarding = () => {
@@ -47,6 +48,7 @@ const Onboarding = () => {
           </View>
         ))}
       </Swiper>
+      <CustomButton onPress={undefined} title={undefined} IconLeft={undefined} IconRight={undefined} className={undefined} />
     </SafeAreaView>
   );
 };
