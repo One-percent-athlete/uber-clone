@@ -48,7 +48,7 @@ const Onboarding = () => {
           </View>
         ))}
       </Swiper>
-      <CustomButton onPress={undefined} title={undefined} IconLeft={undefined} IconRight={undefined} className={undefined} />
+      <CustomButton onPress={undefined} title="Next" IconLeft={undefined} IconRight={undefined} className={undefined} />
     </SafeAreaView>
   );
 };
