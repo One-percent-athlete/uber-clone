@@ -12,6 +12,7 @@ const CustomButton = ({
 }) => (
   <TouchableOpacity onPress={onPress}>
     {IconLeft && <IconLeft />}
+    <Text>{title}</Text>
     {IconRight && <IconRight />}
   </TouchableOpacity>
 )
