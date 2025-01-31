@@ -3,14 +3,14 @@ import { TouchableOpacity } from "react-native";
 
 const getBgVariantStyle = (variant: ButtonProps['bgVariant']) => {
   switch (variant) {
-    case "primary":
-      return "bg-primary-500";
     case "secondary":
-      return "bg-secondary-500";
-    case "tertiary":
-      return "bg-tertiary-500";
-    default:
-      return "bg-primary-500";
+      return "bg-gray-500";
+    case "danger":
+      return "bg-red-500";
+    case "success":
+      return "bg-green-500";
+    case "outline":
+      return "bg-transparent borde-neutral-300 border-[0.5px]";
   }
 }
 
