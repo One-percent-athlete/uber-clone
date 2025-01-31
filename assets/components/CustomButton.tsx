@@ -1,7 +1,7 @@
 import { TouchableOpacity } from "react-native";
 
 const CustomButton = () => (
-  <TouchableOpacity on>
+  <TouchableOpacity onPress={() => alert('You pressed me!')}>
     <Text>Press me</Text>
   </TouchableOpacity>
 )
