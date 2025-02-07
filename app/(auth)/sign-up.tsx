@@ -1,10 +1,10 @@
-import { SafeAreaView, Text } from "react-native";
+import { ScrollView, Text } from "react-native";
 
 const SignUp = () => {
   return (
-    <SafeAreaView>
+    <ScrollView>
       <Text>Sign Up</Text>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 export default SignUp;
