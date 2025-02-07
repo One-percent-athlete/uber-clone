@@ -10,7 +10,7 @@ const SignUp = () => {
             source={images.signUpCar} 
             className="z-0 w-full h-[250px]"
           />
-          <Text>Create Your Account</Text>
+          <Text className="text-2xl text-black font-JakartaBold absolute buttom-5 left-5">Create Your Account</Text>
         </View>
       </View>
     </ScrollView>
