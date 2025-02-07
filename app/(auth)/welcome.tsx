@@ -49,7 +49,7 @@ const Onboarding = () => {
           </View>
         ))}
       </Swiper>
-      <CustomButton title="Next" className="w-11/12 mt-10" />
+      <CustomButton title={isLastSlide ? 'Get Started' : 'Next'} className="w-11/12 mt-10" />
     </SafeAreaView>
   );
 };
