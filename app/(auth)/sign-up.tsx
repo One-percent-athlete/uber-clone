@@ -12,7 +12,7 @@ const SignUp = () => {
         </View>
 
         <View className="p-5">
-          <InputField />
+          <InputField label="Name" labelStyle="Enter Your Name" />
         </View>
       </View>
     </ScrollView>
