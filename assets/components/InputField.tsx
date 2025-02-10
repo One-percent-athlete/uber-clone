@@ -24,8 +24,8 @@ const InputField = ({
           {label}
         </Text>
         <View
-          className={`flex flex-row justify-start items-center relative bg-neutral-100 rounded-full border border-neutural-100 focus:border-primary-500 ${containStyle}`}>
-        </View>
+          className={`flex flex-row justify-start items-center relative bg-neutral-100 rounded-full border border-neutural-100 focus:border-primary-500 ${containStyle}`}
+        ></View>
       </View>
     </TouchableWithoutFeedback>
   </KeyboardAvoidingView>
