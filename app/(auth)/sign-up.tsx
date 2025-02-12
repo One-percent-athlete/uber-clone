@@ -21,7 +21,7 @@ const SignUp = () => {
 
         <View className="p-5">
           <InputField label="Name" placeholder="Enter Your Name" icon={icons.person} value={form.name}
-          onChangeText={(value: any) => setForm({...form, name: value, })} labelStyle="" />
+              onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
         </View>
       </View>
     </ScrollView>
