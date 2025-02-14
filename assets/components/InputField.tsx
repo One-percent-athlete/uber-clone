@@ -19,7 +19,7 @@ const InputField = ({
   iconStyle,
   className,
   ...props
-}) => (
+}: InputFieldProps) => (
   <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View className="my-2 w-full">
