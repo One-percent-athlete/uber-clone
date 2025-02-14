@@ -4,6 +4,7 @@ import {
   TextInput,
   TouchableWithoutFeedback,
   View,
+  Image,
 } from "react-native";
 
 const InputField = ({
@@ -25,7 +26,7 @@ const InputField = ({
         </Text>
         <View
           className={`flex flex-row justify-start items-center relative bg-neutral-100 rounded-full border border-neutural-100 focus:border-primary-500 ${containStyle}`}
-        ></View>
+        >{ icon && <Image />}</View>
       </View>
     </TouchableWithoutFeedback>
   </KeyboardAvoidingView>
