@@ -22,9 +22,9 @@ const SignUp = () => {
         <View className="p-5">
           <InputField label="Name" placeholder="Enter Your Name" icon={icons.person} value={form.name}
               onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
-          <InputField label="Name" placeholder="Enter Your Name" icon={icons.person} value={form.name}
+          <InputField label="Email" placeholder="Enter Your Email" icon={icons.person} value={form.name}
               onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
-          <InputField label="Name" placeholder="Enter Your Name" icon={icons.person} value={form.name}
+          <InputField label="Password" placeholder="Enter Your Password" icon={icons.person} value={form.name}
               onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
         </View>
       </View>
