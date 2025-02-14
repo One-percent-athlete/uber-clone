@@ -27,7 +27,7 @@ const InputField = ({
         <View
           className={`flex flex-row justify-start items-center relative bg-neutral-100 rounded-full border border-neutural-100 focus:border-primary-500 ${containStyle}`}
         >{ icon && (<Image source={icon} className={`w-6 h-6 ml-4 ${iconStyle}`} />)}
-        <TextInput className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1`} />
+        <TextInput className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1 ${inputStyle} text-left`} />
         </View>
       </View>
     </TouchableWithoutFeedback>
