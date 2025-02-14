@@ -2,6 +2,7 @@ import { ScrollView, Text, View } from "react-native";
 import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
 import { useState } from "react";
+import CustomButton from "@/assets/components/CustomButton";
 
 const SignUp = () => {
 
@@ -26,6 +27,7 @@ const SignUp = () => {
               onChangeText={(value: any) => setForm({ ...form, email: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} secureTextEntry={true} value={form.password}
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
+          <CustomButton/>
         </View>
       </View>
     </ScrollView>
