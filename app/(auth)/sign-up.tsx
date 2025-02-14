@@ -24,7 +24,7 @@ const SignUp = () => {
               onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <InputField label="Email" placeholder="Enter Your Email" icon={icons.email} value={form.email}
               onChangeText={(value: any) => setForm({ ...form, email: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
-          <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} value={form.password}
+          <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} secureTextEntry={true} value={form.password}
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
         </View>
       </View>
