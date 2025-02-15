@@ -34,7 +34,8 @@ const SignUp = () => {
           <CustomButton title="Sign Up" onPress={onSignUpPress} className="mt-6"/>
 
           <Link href="/sign-in">
-            <Text className="text-center text-blue-500 mt-5">Already have an account? Sign In</Text>
+            <Text>Already have an account?</Text>
+            <Text className="text-blue-500">Sign In</Text>
           </Link>
         </View>
       </View>
