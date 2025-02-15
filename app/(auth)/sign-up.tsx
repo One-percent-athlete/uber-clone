@@ -12,6 +12,10 @@ const SignUp = () => {
     password: "",
   })
 
+  const onSignUpPress = () => {
+    console.log(form);
+  }
+
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="flex-1 bg-white">
