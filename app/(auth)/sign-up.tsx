@@ -12,7 +12,7 @@ const SignUp = () => {
     password: "",
   })
 
-  const onSignUpPress = () => {
+  const onSignUpPress = async () => {
     console.log(form);
   }
 
@@ -32,6 +32,10 @@ const SignUp = () => {
           <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} secureTextEntry={true} value={form.password}
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <CustomButton title="Sign Up" onPress={onSignUpPress} className="mt-6"/>
+
+          <Link href="/sign-in">
+            <Text className="text-center text-blue-500 mt-5">Already have an account? Sign In</Text>
+          </Link>
         </View>
       </View>
     </ScrollView>
