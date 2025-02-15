@@ -20,7 +20,11 @@ const OAuth = () => (
           resizeMode="contain"
           className="w-5 h-5 mx-2"
         />
-    )}/>
+    )}
+    bgVariant="outline"
+    textVariant="primary"
+    onPress={handleGoogleSignIn}
+    />
   </View>
 )
 
