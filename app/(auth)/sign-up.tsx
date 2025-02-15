@@ -3,6 +3,7 @@ import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
 import { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
+import OAuth from "@/assets/components/OAuth";
 
 const SignUp = () => {
 
@@ -32,6 +33,8 @@ const SignUp = () => {
           <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} secureTextEntry={true} value={form.password}
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <CustomButton title="Sign Up" onPress={onSignUpPress} className="mt-6"/>
+
+          <OAuth />
 
           <Link href="/sign-in" className="text-lg text-center text-general-200 mt-10">
             <Text>Already have an account?</Text>
