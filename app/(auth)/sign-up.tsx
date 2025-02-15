@@ -33,7 +33,7 @@ const SignUp = () => {
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <CustomButton title="Sign Up" onPress={onSignUpPress} className="mt-6"/>
 
-          <Link href="/sign-in">
+          <Link href="/sign-in" className="text-lg text-center text-general-200 mt-10">
             <Text>Already have an account?</Text>
             <Text className="text-primary-500">Login</Text>
           </Link>
