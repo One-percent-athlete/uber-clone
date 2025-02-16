@@ -4,6 +4,9 @@ import { icons } from "@/constants";
 
 
 const OAuth = () => {
+  const handleGoogleSignIn = async (params:type) => {
+    
+  }
   return (
     <View>
       <View className="flex flex-row items-center justify-center mt-4 gap-x-3">
