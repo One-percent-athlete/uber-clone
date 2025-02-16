@@ -10,10 +10,6 @@ import { Slot } from 'expo-router'
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!
 
-if (!publishableKey) {
-  throw new Error("Add EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file");
-}
-
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -30,6 +26,10 @@ export default function RootLayout(): React.JSX.Element | null {
 
   if (!loaded) {
     return null;
+  }
+
+  if (!publishableKey) {
+    throw new Error("Add EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file");
   }
 
   return (
