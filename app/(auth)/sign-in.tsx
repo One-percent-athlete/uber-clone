@@ -8,12 +8,11 @@ import OAuth from "@/assets/components/OAuth";
 const SignIn = () => {
 
   const [form, setForm] = useState({
-    name: "",
     email:"",
     password: "",
   })
 
-  const onSignUpPress = async () => {
+  const onSignInPress = async () => {
     console.log(form);
   }
 
@@ -26,13 +25,11 @@ const SignIn = () => {
         </View>
 
         <View className="p-5">
-          <InputField label="Name" placeholder="Enter Your Name" icon={icons.person} value={form.name}
-              onChangeText={(value: any) => setForm({ ...form, name: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <InputField label="Email" placeholder="Enter Your Email" icon={icons.email} value={form.email}
               onChangeText={(value: any) => setForm({ ...form, email: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
           <InputField label="Password" placeholder="Enter Your Password" icon={icons.lock} secureTextEntry={true} value={form.password}
               onChangeText={(value: any) => setForm({ ...form, password: value, })} labelStyle="" containStyle={undefined} inputStyle={undefined} iconStyle={undefined} className={undefined} />
-          <CustomButton title="Sign Up" onPress={onSignUpPress} className="mt-6"/>
+          <CustomButton title="Sign In" onPress={onSignInPress} className="mt-6"/>
 
           <OAuth />
 
