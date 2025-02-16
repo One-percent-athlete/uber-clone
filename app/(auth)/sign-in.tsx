@@ -5,7 +5,7 @@ import { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 
-const SignUp = () => {
+const SignIn = () => {
 
   const [form, setForm] = useState({
     name: "",
@@ -46,4 +46,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
