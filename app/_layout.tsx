@@ -8,22 +8,11 @@ import 'react-native-reanimated';
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo'
 import { Slot } from 'expo-router'
 
-export default function RootLayout() {
-  const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!
+const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!
 
-  if (!publishableKey) {
-    throw new Error('Add EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file')
-  }
-
-  return (
-    <ClerkProvider publishableKey={publishableKey}>
-      <ClerkLoaded>
-        <Slot />
-      </ClerkLoaded>
-    </ClerkProvider>
-  )
+if (!publishableKey) {
+  throw new Error("Add EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file");
 }
-
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -44,6 +33,8 @@ export default function RootLayout(): React.JSX.Element | null {
   }
 
   return (
+    <ClerkProvider publishableKey={publishableKey}>
+      <ClerkLoaded></ClerkLoaded>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
