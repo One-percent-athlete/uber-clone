@@ -23,7 +23,15 @@ const SignUp = () => {
   });
 
   const onSignUpPress = async () => {
-    console.log(form);
+    if (!isLoaded) {
+      return
+    }
+
+    try {
+      await signUp.create({
+        emailAddress: form.email,
+        password: form.password,
+      })
   }
 
   return (
