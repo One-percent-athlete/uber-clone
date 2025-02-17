@@ -16,6 +16,12 @@ const SignUp = () => {
     password: "",
   })
 
+  const [verification, setVerification] = useState({
+    state: "default",
+    error: "",
+    code: ""
+  });
+
   const onSignUpPress = async () => {
     console.log(form);
   }
