@@ -58,7 +58,10 @@ const SignUp = () => {
             state: 'success',
           })
         } else {
-          console.error(JSON.stringify(signUpAttempt, null, 2))
+          setVerification({
+            ...verification,
+            state: 'failed',
+          })
         }
       } catch (err) {
         // See https://clerk.com/docs/custom-flows/error-handling
