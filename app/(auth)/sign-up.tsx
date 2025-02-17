@@ -5,7 +5,6 @@ import { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 import { useSignUp } from "@clerk/clerk-expo";
-import { router } from "expo-router";
 
 const SignUp = () => {
 
@@ -54,7 +53,10 @@ const SignUp = () => {
   
         if (signUpAttempt.status === 'complete') {
           await setActive({ session: signUpAttempt.createdSessionId })
-          router.replace('/')
+          setVerification({
+            ...verification,
+            state: 'success',
+          })
         } else {
           console.error(JSON.stringify(signUpAttempt, null, 2))
         }
