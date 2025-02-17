@@ -60,6 +60,7 @@ const SignUp = () => {
         } else {
           setVerification({
             ...verification,
+            error: "Verification failed",
             state: 'failed',
           })
         }
