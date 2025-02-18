@@ -1,7 +1,7 @@
 import { ScrollView, Text, View } from "react-native";
 import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
-import { useState } from "react";
+import React, { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 import { useSignUp } from "@clerk/clerk-expo";
@@ -133,7 +133,7 @@ const SignUp = () => {
           <Text className="text-primary-500">Login</Text>
         </Link>
       </View>
-      <ReactNativeModal>
+      <ReactNativeModal isVisible={verification.state === "pending"}>
 
       </ReactNativeModal>
     </ScrollView>
