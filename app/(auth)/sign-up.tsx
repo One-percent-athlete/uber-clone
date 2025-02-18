@@ -21,7 +21,6 @@ const SignUp = () => {
     error: "",
     code: ""
   });
-
   const onSignUpPress = async () => {
     if (!isLoaded) {
       return
@@ -45,12 +44,10 @@ const SignUp = () => {
   }
   const onVerifyPress = async () => {
     if (!isLoaded) return;
-  
     try {
       const signUpAttempt = await signUp.attemptEmailAddressVerification({
         code: verification.code,
       })
-
       if (signUpAttempt.status === "complete") {
         await setActive({ session: signUpAttempt.createdSessionId })
         setVerification({
@@ -72,7 +69,6 @@ const SignUp = () => {
       })
     }
   }
-
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="relative w-full h-[250px]">
