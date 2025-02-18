@@ -133,8 +133,8 @@ const SignUp = () => {
           <Text className="text-primary-500">Login</Text>
         </Link>
       </View>
-      <ReactNativeModal isVisible={verification.state === "pending"}>
-
+      <ReactNativeModal
+        isVisible={verification.state === "pending"}>
       </ReactNativeModal>
     </ScrollView>
   );
