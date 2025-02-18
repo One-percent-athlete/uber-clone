@@ -32,11 +32,11 @@ const SignUp = () => {
         password: form.password,
       })
 
-      await signUp.prepareEmailAddressVerification({ strategy: 'email_code' })
+      await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
 
       setVerification({
         ...verification,
-        state: 'pending',
+        state: "pending",
       })
     } catch (err) {
       console.error(JSON.stringify(err, null, 2))
