@@ -43,34 +43,34 @@ const SignUp = () => {
       console.error(JSON.stringify(err, null, 2))
     }
   }
-    const onVerifyPress = async () => {
-      if (!isLoaded) return
+  const onVerifyPress = async () => {
+    if (!isLoaded) return;
   
-      try {
-        const signUpAttempt = await signUp.attemptEmailAddressVerification({
-          code: verification.code,
-        })
-  
-        if (signUpAttempt.status === 'complete') {
-          await setActive({ session: signUpAttempt.createdSessionId })
-          setVerification({
-            ...verification,
-            state: 'success',
-          })
-        } else {
-          setVerification({
-            ...verification,
-            error: "Verification failed",
-            state: 'failed',
-          })
-        }
-      } catch (err: any) {
+    try {
+      const signUpAttempt = await signUp.attemptEmailAddressVerification({
+        code: verification.code,
+      })
+
+      if (signUpAttempt.status === "complete") {
+        await setActive({ session: signUpAttempt.createdSessionId })
         setVerification({
           ...verification,
-          error: err.error[0].longMessage,
-          state: 'failed',
+          state: "success",
+        })
+      } else {
+        setVerification({
+          ...verification,
+          error: "Verification failed",
+          state: "failed",
         })
       }
+    } catch (err: any) {
+      setVerification({
+        ...verification,
+        error: err.error[0].longMessage,
+        state: "failed",
+      })
+    }
   }
 
   return (
