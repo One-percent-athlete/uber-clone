@@ -72,6 +72,7 @@ const SignUp = () => {
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="relative w-full h-[250px]">
+        
         <Image source={images.signUpCar} className="z-0 w-full h-[250px]" />
         <Text className="text-2xl text-black font-JakartaBold absolute buttom-5 left-5">
           Create Your Account
@@ -132,6 +133,9 @@ const SignUp = () => {
           <Text className="text-primary-500">Login</Text>
         </Link>
       </View>
+      <ReactNativeModal>
+
+      </ReactNativeModal>
     </ScrollView>
   );
 };
