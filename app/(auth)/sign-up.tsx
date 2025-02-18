@@ -135,7 +135,7 @@ const SignUp = () => {
       </View>
       <ReactNativeModal
         isVisible={verification.state === "success"}>
-          <View>
+          <View className="bg-white px-7 py-9 ">
             <Text>Verification Success</Text>
           </View>
       </ReactNativeModal>
