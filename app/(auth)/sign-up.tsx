@@ -133,11 +133,10 @@ const SignUp = () => {
           <Text className="text-primary-500">Login</Text>
         </Link>
       </View>
-      <ReactNativeModal
-        isVisible={verification.state === "success"}>
-          <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
-            <Text>Verification Success</Text>
-          </View>
+      <ReactNativeModal isVisible={verification.state === "success"}>
+        <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
+          <Text>Verification Success</Text>
+        </View>
       </ReactNativeModal>
     </ScrollView>
   );
