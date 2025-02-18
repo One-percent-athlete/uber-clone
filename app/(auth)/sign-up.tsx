@@ -134,7 +134,10 @@ const SignUp = () => {
         </Link>
       </View>
       <ReactNativeModal
-        isVisible={verification.state === "pending"}>
+        isVisible={verification.state === "success"}>
+          <View>
+            <Text>Verification Success</Text>
+          </View>
       </ReactNativeModal>
     </ScrollView>
   );
