@@ -18,7 +18,7 @@ const SignUp = () => {
   })
 
   const [verification, setVerification] = useState({
-    state: "success",
+    state: "default",
     error: "",
     code: ""
   });
@@ -145,8 +145,8 @@ const SignUp = () => {
           <CustomButton
             title="Browse Home"
             onPress={() => router.replace("/(root)/(tabs)/home")}
-            className="mt-5">
-          </CustomButton>
+            className="mt-5"
+          ></CustomButton>
         </View>
       </ReactNativeModal>
     </ScrollView>
