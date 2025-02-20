@@ -151,12 +151,9 @@ const SignUp = () => {
             value={verification.code}
             keyboardType="numeric"
             onChangeText={(code) => setVerification({ ...verification, code })}
-            labelStyle=""
-            containStyle={undefined}
-            inputStyle={undefined}
-            iconStyle={undefined}
-            className={undefined}
           />
+          {verification.error && (
+            <Text className="text-red-500 text-sm mt-1">{verification.error}</Text> )}
         </View>
       </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
