@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 import { useSignUp } from "@clerk/clerk-expo";
+import { router } from "expo-router";
 
 const SignUp = () => {
 
@@ -141,6 +142,10 @@ const SignUp = () => {
           <Text className="text-base text-gray-400 font-Jakarta text-center mt-2">
             You have successfully verified your account
           </Text>
+          <CustomButton
+            title="Browse Home"
+            onPress={() => router}
+          ></CustomButton>
         </View>
       </ReactNativeModal>
     </ScrollView>
