@@ -144,6 +144,19 @@ const SignUp = () => {
           <Text className="font-Jakarta mb-5">
             We've sent a verification code to {form.email}.
           </Text>
+          <InputField 
+            label="Verification Code"
+            icon={icons.lock}
+            placeholder="123456"
+            value={verification.code}
+            keyboardType="numeric"
+            onChangeText={(code) => setVerification({ ...verification, code })}
+            labelStyle=""
+            containStyle={undefined}
+            inputStyle={undefined}
+            iconStyle={undefined}
+            className={undefined}
+          />
         </View>
       </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
