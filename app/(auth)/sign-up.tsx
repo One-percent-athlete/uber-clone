@@ -1,4 +1,4 @@
-import { ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
 import React, { useState } from "react";
@@ -135,6 +135,10 @@ const SignUp = () => {
       </View>
       <ReactNativeModal isVisible={verification.state === "success"}>
         <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
+          <Image
+            source={images.check}
+            className="w-[110px] h-[110px] mx-auto my-5"
+          />
           <Text>Verification Success</Text>
         </View>
       </ReactNativeModal>
