@@ -133,6 +133,10 @@ const SignUp = () => {
       <ReactNativeModal
         isVisible={verification.state === "pending"}
         onModalHide={() => setVerification({ ...verification, code: "" })}>
+          <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
+            <Text className="text-2xl font-JakartaExtraBold mb-
+            2">Verification</Text>
+          </View>
       </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
         <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
