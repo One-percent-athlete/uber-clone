@@ -153,7 +153,16 @@ const SignUp = () => {
             onChangeText={(code) => setVerification({ ...verification, code })}
           />
           {verification.error && (
-            <Text className="text-red-500 text-sm mt-1">{verification.error}</Text> )}
+            <Text className="text-red-500 text-sm mt-1">
+              {verification.error}
+            </Text>
+          )}
+
+          <CustomButton
+            title="Verify Email"
+            onPress={onVerifyPress}
+            className="mt-5 bg-success-500"
+          ></CustomButton>
         </View>
       </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
