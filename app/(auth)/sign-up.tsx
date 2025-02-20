@@ -144,8 +144,9 @@ const SignUp = () => {
           </Text>
           <CustomButton
             title="Browse Home"
-            onPress={() => router}
-          ></CustomButton>
+            onPress={() => router.replace("/(root)/(tabs)/home")}
+            className="mt-5">
+          </CustomButton>
         </View>
       </ReactNativeModal>
     </ScrollView>
