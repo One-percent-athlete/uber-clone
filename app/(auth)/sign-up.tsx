@@ -135,7 +135,9 @@ const SignUp = () => {
             source={images.check}
             className="w-[110px] h-[110px] mx-auto my-5"
           />
-          <Text>Verification Success</Text>
+          <Text className="text-3xl font-JakartaBold">
+            Verification Success
+          </Text>
         </View>
       </ReactNativeModal>
     </ScrollView>
