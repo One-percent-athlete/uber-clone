@@ -18,7 +18,7 @@ const SignUp = () => {
   })
 
   const [verification, setVerification] = useState({
-    state: "default",
+    state: "pending",
     error: "",
     code: ""
   });
@@ -130,6 +130,10 @@ const SignUp = () => {
           <Text className="text-primary-500">Login</Text>
         </Link>
       </View>
+      <ReactNativeModal
+        isVisible={verification.state === "pending"}
+        onModalHide={() => setVerification({ ...verification, code: "" })}>
+      </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
         <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
           <Image
