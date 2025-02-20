@@ -1,4 +1,4 @@
-import { Image, ScrollView, Text, View } from "react-native";
+import { Alert, Image, ScrollView, Text, View } from "react-native";
 import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
 import React, { useState } from "react";
@@ -37,7 +37,7 @@ const SignUp = () => {
         state: "pending",
       })
     } catch (err) {
-      console.error(JSON.stringify(err, null, 2))
+      Alert.alert("Error", err.error[0].longMessage);
     }
   }
   const onVerifyPress = async () => {
@@ -83,11 +83,6 @@ const SignUp = () => {
           icon={icons.person}
           value={form.name}
           onChangeText={(value: any) => setForm({ ...form, name: value })}
-          labelStyle=""
-          containStyle={undefined}
-          inputStyle={undefined}
-          iconStyle={undefined}
-          className={undefined}
         />
         <InputField
           label="Email"
@@ -95,11 +90,6 @@ const SignUp = () => {
           icon={icons.email}
           value={form.email}
           onChangeText={(value: any) => setForm({ ...form, email: value })}
-          labelStyle=""
-          containStyle={undefined}
-          inputStyle={undefined}
-          iconStyle={undefined}
-          className={undefined}
         />
         <InputField
           label="Password"
@@ -108,11 +98,6 @@ const SignUp = () => {
           secureTextEntry={true}
           value={form.password}
           onChangeText={(value: any) => setForm({ ...form, password: value })}
-          labelStyle=""
-          containStyle={undefined}
-          inputStyle={undefined}
-          iconStyle={undefined}
-          className={undefined}
         />
         <CustomButton
           title="Sign Up"
@@ -162,7 +147,7 @@ const SignUp = () => {
             title="Verify Email"
             onPress={onVerifyPress}
             className="mt-5 bg-success-500"
-          ></CustomButton>
+          />
         </View>
       </ReactNativeModal>
       <ReactNativeModal isVisible={verification.state === "success"}>
