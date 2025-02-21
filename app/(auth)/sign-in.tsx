@@ -6,6 +6,8 @@ import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 
 const SignIn = () => {
+  const { signIn, setActive, isLoaded } = useSignIn()
+  const router = useRouter()
 
   const [form, setForm] = useState({
     email:"",
