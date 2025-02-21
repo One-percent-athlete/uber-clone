@@ -10,6 +10,7 @@ import { router } from "expo-router";
 const SignUp = () => {
 
   const { isLoaded, signUp, setActive } = useSignUp();
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
