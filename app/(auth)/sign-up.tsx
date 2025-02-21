@@ -37,7 +37,7 @@ const SignUp = () => {
         state: "pending",
       })
     } catch (err) {
-      Alert.alert("Error", err.error[0].longMessage);
+      Alert.alert("Error", err.errors[0].longMessage);
     }
   }
   const onVerifyPress = async () => {
