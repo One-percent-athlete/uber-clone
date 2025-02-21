@@ -155,7 +155,7 @@ const SignUp = () => {
           />
         </View>
       </ReactNativeModal>
-      <ReactNativeModal isVisible={verification.state === "success"}>
+      <ReactNativeModal isVisible={showSuccessModal}>
         <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
           <Image
             source={images.check}
