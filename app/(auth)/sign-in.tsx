@@ -4,6 +4,8 @@ import InputField from "@/assets/components/InputField";
 import { useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
+import { useSignIn } from "@clerk/clerk-expo";
+import { useRouter } from "expo-router";
 
 const SignIn = () => {
   const { signIn, setActive, isLoaded } = useSignIn()
@@ -56,11 +58,6 @@ const SignIn = () => {
             icon={icons.email}
             value={form.email}
             onChangeText={(value: any) => setForm({ ...form, email: value })}
-            labelStyle=""
-            containStyle={undefined}
-            inputStyle={undefined}
-            iconStyle={undefined}
-            className={undefined}
           />
           <InputField
             label="Password"
@@ -69,11 +66,6 @@ const SignIn = () => {
             secureTextEntry={true}
             value={form.password}
             onChangeText={(value: any) => setForm({ ...form, password: value })}
-            labelStyle=""
-            containStyle={undefined}
-            inputStyle={undefined}
-            iconStyle={undefined}
-            className={undefined}
           />
           <CustomButton
             title="Sign In"
