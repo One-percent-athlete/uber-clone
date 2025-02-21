@@ -1,11 +1,11 @@
 import { ScrollView, Text, View } from "react-native";
 import { icons, images } from "@/constants";
 import InputField from "@/assets/components/InputField";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 import { useSignIn } from "@clerk/clerk-expo";
-import { useRouter } from "expo-router";
+import { useRouter, Link } from "expo-router";
 
 const SignIn = () => {
   const { signIn, setActive, isLoaded } = useSignIn()
@@ -16,7 +16,7 @@ const SignIn = () => {
     password: "",
   })
 
-  const onSignInPress = async () => {
+  const onSignInPress = useCallback(async () => {
     if (!isLoaded) return
 
     // Start the sign-in process using the email and password provided
@@ -42,6 +42,7 @@ const SignIn = () => {
       console.error(JSON.stringify(err, null, 2))
     }
   }
+)
 
   return (
     <ScrollView className="flex-1 bg-white">
