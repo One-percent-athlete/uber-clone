@@ -12,7 +12,9 @@ const TabIcon = ({
   <View
     className={`flex flex-row items-center justify-center rounded-full ${focused ? "bg-general-300" : ""}`}
   >
-    <View>
+    <View
+      className={`rounded-full w-12 items-center justify-center ${focused ? "bg-general-400" : ""}`}
+    >
       <Image source={icons.home} />
     </View>
   </View>
