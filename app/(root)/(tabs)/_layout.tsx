@@ -2,7 +2,9 @@ import { icons } from "@/constants";
 import { Tabs } from "expo-router";
 
 const TabIcon= () => (
-  <View>
+  <View
+    className={`flex flex-row items-center justify-center rounded-full ${focused ? "bg-general-300" : ""}`}
+  >
     <View>
       <Image source={icons.home} />
     </View>
