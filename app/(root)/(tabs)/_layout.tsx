@@ -1,5 +1,11 @@
 import { Tabs } from "expo-router";
 
+const TabIcon= () => (
+  <View>
+    <Text>Home</Text>
+  </View>
+)
+
 const layout = () =>(
   <Tabs
     initialRouteName="index"
