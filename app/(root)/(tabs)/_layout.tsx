@@ -24,7 +24,18 @@ const layout = () =>(
         tabBarIcon: ({ focused }) => (
           <TabIcon focused={focused} source={icons.home} />
         ),
-    }} />
+    }} 
+    />
+    <Tabs.Screen
+      name="profile"
+      options={{
+        title: "Profile",
+        headerShown: false,
+        tabBarIcon: ({ focused }) => (
+          <TabIcon focused={focused} source={icons.profile} />
+        ),
+    }} 
+    />
   </Tabs>
 )
 
