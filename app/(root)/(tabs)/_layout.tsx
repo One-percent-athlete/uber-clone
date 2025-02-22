@@ -6,7 +6,15 @@ const layout = () =>(
     screenOptions={{
       tabBarActiveTintColor = "white",
     }}
-    ></Tabs>
+    >
+    <Tabs.Screen
+      name="home"
+      options={{
+        title: "Home",
+        headerShown: false,
+        tabBarIcon: () => <TabIcon />
+    }} />
+  </Tabs>
 )
 
 export default layout;
