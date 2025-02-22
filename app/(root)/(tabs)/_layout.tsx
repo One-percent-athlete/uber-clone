@@ -20,7 +20,7 @@ const layout = () =>(
       options={{
         title: "Home",
         headerShown: false,
-        tabBarIcon: () => <TabIcon />
+        tabBarIcon: ({ focused }) => <TabIcon focused={focused} />,
     }} />
   </Tabs>
 )
