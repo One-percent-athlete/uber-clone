@@ -1,3 +1,4 @@
+import { icons } from "@/constants";
 import { Tabs } from "expo-router";
 
 const TabIcon= () => (
@@ -20,7 +21,9 @@ const layout = () =>(
       options={{
         title: "Home",
         headerShown: false,
-        tabBarIcon: ({ focused }) => <TabIcon focused={focused} />,
+        tabBarIcon: ({ focused }) => (
+          <TabIcon focused={focused} source={icons.home} />
+        ),
     }} />
   </Tabs>
 )
