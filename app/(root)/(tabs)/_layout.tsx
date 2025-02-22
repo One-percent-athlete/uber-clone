@@ -2,7 +2,9 @@ import { Tabs } from "expo-router";
 
 const TabIcon= () => (
   <View>
-    <Text>Home</Text>
+    <View>
+      <Image source={icons.home} />
+    </View>
   </View>
 )
 
