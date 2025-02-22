@@ -12,7 +12,7 @@ const layout = () =>(
   <Tabs
     initialRouteName="index"
     screenOptions={{
-      tabBarActiveTintColor = "white",
+      tabBarActiveTintColor: "white",
     }}
     >
     <Tabs.Screen
