@@ -35,7 +35,10 @@ const layout = () =>(
       tabBarStyle: {
         backgroundColor: "#333333",
         borderRadius: 50,
-        borderTopColor: "transparent",
+        paddingBottom: 0,
+        overflow: "hidden",
+        marginHorizontal: 20,
+        marginBottom: 20,
         height: 60,
       },
     }}
