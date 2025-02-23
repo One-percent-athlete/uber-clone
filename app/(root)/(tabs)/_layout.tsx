@@ -32,6 +32,12 @@ const layout = () =>(
       tabBarActiveTintColor: "white",
       tabBarInactiveTintColor: "white",
       tabBarShowLabel: false,
+      tabBarStyle: {
+        backgroundColor: "#333333",
+        borderRadius: 50,
+        borderTopColor: "transparent",
+        height: 60,
+      },
     }}
     >
     <Tabs.Screen
