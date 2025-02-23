@@ -39,7 +39,10 @@ const layout = () =>(
         overflow: "hidden",
         marginHorizontal: 20,
         marginBottom: 20,
-        height: 60,
+        height: 78,
+        display: "flex",
+        justifyContent: "space-between",
+        
       },
     }}
     >
