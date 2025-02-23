@@ -15,7 +15,12 @@ const TabIcon = ({
     <View
       className={`rounded-full w-12 items-center justify-center ${focused ? "bg-general-400" : ""}`}
     >
-      <Image source={icons.home} />
+      <Image
+        source={source}
+        tintColor="white"
+        resizeMode="contain"
+        className="w-7 h-7"
+      />
     </View>
   </View>
 )
