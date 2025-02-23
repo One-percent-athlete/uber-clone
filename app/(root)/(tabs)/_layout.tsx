@@ -30,6 +30,8 @@ const layout = () =>(
     initialRouteName="index"
     screenOptions={{
       tabBarActiveTintColor: "white",
+      tabBarInactiveTintColor: "white",
+      tabBarShowLabel: false,
     }}
     >
     <Tabs.Screen
