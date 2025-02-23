@@ -42,7 +42,9 @@ const layout = () =>(
         height: 78,
         display: "flex",
         justifyContent: "space-between",
-        
+        alignItems: "center",
+        flexDirection: "row",
+        position: "absolute"
       },
     }}
     >
