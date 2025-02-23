@@ -1,5 +1,11 @@
 import { neon } from "@neondatabase/serverless";
 
-const sql = neon(process.env.YOUR_DATABASE_URL);
+const sql = neon(`{process.env.YOUR_DATABASE_URL}`);
 
-const posts = await sql("SELECT * FROM posts");
+export async function POST(request: Request) {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
