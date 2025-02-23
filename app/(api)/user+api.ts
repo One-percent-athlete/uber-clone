@@ -11,6 +11,20 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
+
+  const response = await sql`
+    INSERT INTO users (
+      name,
+      email,
+      clerk_id
+    )
+    VALUES (
+      ${name},
+      ${email},
+      ${clerkId}
+    )
+  `
+
   try {
   } catch (error) {}
 }
