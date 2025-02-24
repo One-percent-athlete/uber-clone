@@ -6,6 +6,7 @@ import CustomButton from "@/assets/components/CustomButton";
 import OAuth from "@/assets/components/OAuth";
 import { useSignUp } from "@clerk/clerk-expo";
 import { router } from "expo-router";
+import { fetchAPI } from "@/lib/fetch";
 
 const SignUp = () => {
 
@@ -48,6 +49,9 @@ const SignUp = () => {
         code: verification.code,
       })
       if (signUpAttempt.status === "complete") {
+
+        await fetchAPI("/(api)/user")
+
         await setActive({ session: signUpAttempt.createdSessionId })
         setVerification({
           ...verification,
