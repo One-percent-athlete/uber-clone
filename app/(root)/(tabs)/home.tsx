@@ -2,7 +2,7 @@ import { SignedIn, useUser } from "@clerk/clerk-expo";
 import { FlatList, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const recentRids = [
+const recentRides = [
   {
       "ride_id": "1",
       "origin_address": "Kathmandu, Nepal",
@@ -106,7 +106,10 @@ export default function Page() {
 
   return (
     <SafeAreaView className="bg-general-500">
-      <FlatList data={[]} />
+      <FlatList
+        data={recentRides?.slice(0, 5)}
+        renderItem={({ item }) => <RideCard />}
+      />
     </SafeAreaView>
   )
 }
