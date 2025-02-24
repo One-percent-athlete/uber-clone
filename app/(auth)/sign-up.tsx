@@ -50,7 +50,14 @@ const SignUp = () => {
       })
       if (signUpAttempt.status === "complete") {
 
-        await fetchAPI("/(api)/user")
+        await fetchAPI("/(api)/user", {
+          method: "POST",
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            clerkId: completeSignUp.createUserId,
+          }),
+        });
 
         await setActive({ session: signUpAttempt.createdSessionId })
         setVerification({
