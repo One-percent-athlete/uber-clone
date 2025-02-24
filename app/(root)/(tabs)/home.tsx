@@ -108,7 +108,7 @@ export default function Page() {
     <SafeAreaView className="bg-general-500">
       <FlatList
         data={recentRides?.slice(0, 5)}
-        renderItem={({ item }) => <RideCard />}
+        renderItem={({ item }) => <RideCard rider={item} />}
       />
     </SafeAreaView>
   )
