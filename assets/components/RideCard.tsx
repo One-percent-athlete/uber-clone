@@ -25,8 +25,8 @@ const RideCard = ({
             <View className="flex flex-col mx-5 gap-y-5 flex-1">
                 <View className="flex flex-row items-center gap-x-2">
                     <Image
-                        source={{ uri: driver.profile_image_url }}
-                        className="w-[40px] h-[40px] rounded-full"
+                        source={icons.to}
+                        className="w-5 h-5"
                     />
                     <Text className="text-lg">{driver.first_name}</Text>
                 </View>
