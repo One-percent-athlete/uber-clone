@@ -19,8 +19,7 @@ const RideCard = ({
     <View className="flex flex-row items-center justify-between p-3">
         <View className="flex flex-row items-center justify-between">
             <Image
-                className="w-12 h-12 rounded-full"
-                source={{ uri: driver.profile_image_url }}
+                source={{ uri: `https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:${destination_longitude},${destination_latitude}&zoom=14&apiKey=${process.env.EXPO_PUBLIC_GEOAPIFY_API_KEY}` }}
             />
             <View className="ml-3">
                 <Text className="text-sm text-general-200">Driver</Text>
