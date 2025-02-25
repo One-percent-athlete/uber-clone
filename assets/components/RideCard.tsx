@@ -16,7 +16,7 @@ const RideCard = ({
   ride: Ride;
 }) => (
   <View>
-    <Text className="text-3xl">{ride.driver.first_name}</Text>
+    <Text className="text-3xl">{driver.first_name}</Text>
   </View>
 )
 
