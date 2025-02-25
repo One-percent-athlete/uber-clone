@@ -22,9 +22,14 @@ const RideCard = ({
                 source={{ uri: `https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:${destination_longitude},${destination_latitude}&zoom=14&apiKey=${process.env.EXPO_PUBLIC_GEOAPIFY_API_KEY}` }}
                 className="w-[80px] h-[90px] rounded-lg"
             />
-            <View className="ml-3">
-                <Text className="text-sm text-general-200">Driver</Text>
-                <Text className="text-lg font-JakartaExtraBold">{driver.first_name}</Text>
+            <View className="flex flex-col mx-5 gap-y-5 flex-1">
+                <View className="flex flex-row items-center gap-x-2">
+                    <Image
+                        source={{ uri: driver.profile_image_url }}
+                        className="w-[40px] h-[40px] rounded-full"
+                    />
+                    <Text className="text-lg">{driver.first_name}</Text>
+                </View>
             </View>
     </View>
     <Text className="text-3xl">{driver.first_name}</Text>
