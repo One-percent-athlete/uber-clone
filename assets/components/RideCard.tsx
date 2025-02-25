@@ -15,7 +15,7 @@ const RideCard = ({
 }: {
   ride: Ride;
 }) => (
-  <View>
+  <View className="flex flex-row items-center justify-center bg-white rounded-lg shadow-sm shadow-neutral-300 mb-3">
     <Text className="text-3xl">{driver.first_name}</Text>
   </View>
 )
