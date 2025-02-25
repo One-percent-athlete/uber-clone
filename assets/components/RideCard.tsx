@@ -28,7 +28,7 @@ const RideCard = ({
                         source={icons.to}
                         className="w-5 h-5"
                     />
-                    <Text className="text-lg">{driver.first_name}</Text>
+                    <Text className="text-md font-JakartaMedium">{origin_address}</Text>
                 </View>
             </View>
     </View>
