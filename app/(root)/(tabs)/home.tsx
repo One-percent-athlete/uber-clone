@@ -109,6 +109,8 @@ export default function Page() {
       <FlatList
         data={recentRides?.slice(0, 5)}
         renderItem={({ item }) => <RideCard rider={item} />}
+        className="px-5"
+        keyboardShouldPersistTaps="handled"
       />
     </SafeAreaView>
   )
