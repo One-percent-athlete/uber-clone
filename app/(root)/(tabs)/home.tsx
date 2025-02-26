@@ -1,7 +1,7 @@
 import RideCard from "@/assets/components/RideCard";
 import { images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
-import { FlatList, View, Text } from "react-native";
+import { FlatList, View, Text, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const recentRides = [
@@ -128,7 +128,7 @@ export default function Page() {
                 <Text className="text-sm">No recent rides found</Text>
               </> 
             ) : (
-              <Text>Loading</Text>
+              <ActivityIndicator size="small" color="#000" />
             )
             }
           </View>
