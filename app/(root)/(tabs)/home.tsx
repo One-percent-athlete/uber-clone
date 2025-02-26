@@ -1,3 +1,4 @@
+import RideCard from "@/assets/components/RideCard";
 import { useUser } from "@clerk/clerk-expo";
 import { FlatList, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -115,7 +116,13 @@ export default function Page() {
         contentContainerStyle={{ paddingBottom: 100 }}
         ListEmptyComponent={() => (
           <View className="flex flex-col items-center justify-center">
-            <Text className="text-2xl text-white font-JakartaBold">No Rides Found</Text>
+            {!loading ? (
+              <>
+                <Text className="text-lg font-JakartaMedium text-gray-500">
+                  No rides available
+                </Text>  
+              </>
+            )}
           </View>
         )}
       />
