@@ -125,6 +125,7 @@ export default function Page() {
                   alt="No recent ride found"
                   resizeMode="contain"
                 />
+                <Text className="text-sm">No recent rides found</Text>
               </> 
             ) : (
               <Text>Loading</Text>
