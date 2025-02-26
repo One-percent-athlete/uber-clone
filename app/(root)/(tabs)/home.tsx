@@ -1,4 +1,5 @@
 import RideCard from "@/assets/components/RideCard";
+import { images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
 import { FlatList, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -118,7 +119,12 @@ export default function Page() {
           <View className="flex flex-col items-center justify-center">
             {!loading ? (
               <>
-                <Image source={images.noResult} /> 
+                <Image
+                  source={images.noResult}
+                  className="w-40 h-40"
+                  alt="No recent ride found"
+                  resizeMode="contain"
+                />
               </> 
             ) : (
               <Text>Loading</Text>
