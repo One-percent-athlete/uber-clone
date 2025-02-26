@@ -104,8 +104,8 @@ const recentRides = [
 ]
 
 export default function Page() {
-  const { user } = useUser()
-  const loading = false
+  const { user } = useUser();
+  const loading = false;
 
   return (
     <SafeAreaView className="bg-general-500">
@@ -136,7 +136,7 @@ export default function Page() {
         ListFooterComponent={() => (
           <>
             <View className="flex flex-row items-center justify-between my-5 ">
-              <Text>Welcome {user?.firstName}</Text>
+              <Text>Welcome { user?.firstName || user?.emailAddresses[0] }</Text>
             </View>
           </>
         )}
