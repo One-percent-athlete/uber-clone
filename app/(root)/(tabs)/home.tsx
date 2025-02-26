@@ -140,7 +140,10 @@ export default function Page() {
                 Welcome{" "}
                 {user?.firstName || user?.emailAddresses[0].emailAddress}
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={handleSignOut}
+                className="justify-center w-10 h-10 rounded-full bg-white"
+              >
                 <Image source={icons.out} className="w-4 h-4" />
               </TouchableOpacity>
             </View>
