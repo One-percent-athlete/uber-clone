@@ -118,11 +118,12 @@ export default function Page() {
           <View className="flex flex-col items-center justify-center">
             {!loading ? (
               <>
-                <Text className="text-lg font-JakartaMedium text-gray-500">
-                  No rides available
-                </Text>  
-              </>
-            )}
+                <Image source={images.noResult} /> 
+              </> 
+            ) : (
+              <Text>Loading</Text>
+            )
+            }
           </View>
         )}
       />
