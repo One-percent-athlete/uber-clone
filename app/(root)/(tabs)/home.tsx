@@ -111,6 +111,7 @@ export default function Page() {
         renderItem={({ item }) => <RideCard rider={item} />}
         className="px-5"
         keyboardShouldPersistTaps="handled"
+        contentContainerStyle={{ paddingBottom: 100 }}
       />
     </SafeAreaView>
   )
