@@ -112,6 +112,11 @@ export default function Page() {
         className="px-5"
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ paddingBottom: 100 }}
+        ListEmptyComponent={() => (
+          <View className="flex-1 items-center justify-center">
+            <Text className="text-2xl text-white font-JakartaBold">No Rides Found</Text>
+          </View>
+        )}
       />
     </SafeAreaView>
   )
