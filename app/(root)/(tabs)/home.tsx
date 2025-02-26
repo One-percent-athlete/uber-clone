@@ -1,5 +1,5 @@
 import { useUser } from "@clerk/clerk-expo";
-import { FlatList } from "react-native";
+import { FlatList, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const recentRides = [
@@ -103,6 +103,7 @@ const recentRides = [
 
 export default function Page() {
   const { user } = useUser()
+  const loading = false
 
   return (
     <SafeAreaView className="bg-general-500">
@@ -113,7 +114,7 @@ export default function Page() {
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ paddingBottom: 100 }}
         ListEmptyComponent={() => (
-          <View className="flex-1 items-center justify-center">
+          <View className="flex flex-col items-center justify-center">
             <Text className="text-2xl text-white font-JakartaBold">No Rides Found</Text>
           </View>
         )}
