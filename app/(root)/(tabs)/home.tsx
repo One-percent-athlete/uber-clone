@@ -133,6 +133,13 @@ export default function Page() {
             }
           </View>
         )}
+        ListFooterComponent={() => (
+          <>
+            <View className="flex flex-row items-center justify-between my-5 ">
+              <Text>Welcome {user?.firstName}</Text>
+            </View>
+          </>
+        )}
       />
     </SafeAreaView>
   )
