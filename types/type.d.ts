@@ -47,6 +47,7 @@ declare interface Ride {
   user_id: string;
   created_at: string;
   driver: {
+    payment_status: ReactNode;
     first_name: string;
     last_name: string;
     car_seats: number;
