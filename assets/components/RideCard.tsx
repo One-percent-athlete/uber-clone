@@ -50,7 +50,9 @@ const RideCard = ({
           </Text>
         </View>
         <View className="flex flex-row items-center justify-between w-full mb-5">
-          <Text>Driver</Text>
+          <Text className="text-md font-JakartaMedium text-gray-500">
+            Driver
+          </Text>
         </View>
       </View>
     </View>
