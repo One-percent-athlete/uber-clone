@@ -44,15 +44,27 @@ const RideCard = ({
       </View>
       <View className="flex flex-col w-full mt-5 bg-general-500 rounded-lg p-3 items-center justify-center">
         <View className="flex flex-row items-center justify-between w-full mb-5">
-          <Text className="text-md font-JakartaMedium text-gray-500">Date & Time</Text>
+          <Text className="text-md font-JakartaMedium text-gray-500">
+            Date & Time
+          </Text>
           <Text className="text-md font-JakartaMedium text-gray-500">
             {formatDate(created_at)}, {formatTime(ride_time)}
           </Text>
         </View>
         <View className="flex flex-row items-center justify-between w-full mb-5">
-          <Text className="text-md font-JakartaMedium text-gray-500">Driver</Text>
+          <Text className="text-md font-JakartaMedium text-gray-500">
+            Driver
+          </Text>
           <Text className="text-md font-JakartaMedium text-gray-500">
             {driver.first_name}, {driver.last_name}
+          </Text>
+        </View>
+        <View className="flex flex-row items-center justify-between w-full mb-5">
+          <Text className="text-md font-JakartaMedium text-gray-500">
+            Car Seats
+          </Text>
+          <Text className="text-md font-JakartaMedium text-gray-500">
+            {driver.car_seats}
           </Text>
         </View>
       </View>
