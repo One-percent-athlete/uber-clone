@@ -107,11 +107,15 @@ export default function Page() {
   const { user } = useUser();
   const loading = false;
 
+  const handleSignOut = () => {
+
+  }
+
   return (
     <SafeAreaView className="bg-general-500">
       <FlatList
         data={recentRides?.slice(0, 5)}
-        renderItem={({ item }) => <RideCard rider={item} />}
+        renderItem={({ item }) => <RideCard ride={item} />}
         className="px-5"
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ paddingBottom: 100 }}
@@ -143,7 +147,7 @@ export default function Page() {
               </Text>
               <TouchableOpacity
                 onPress={handleSignOut}
-                className="justify-center w-10 h-10 rounded-full bg-white"
+                className="justify-center items-center w-10 h-10 rounded-full bg-white"
               >
                 <Image source={icons.out} className="w-4 h-4" />
               </TouchableOpacity>
