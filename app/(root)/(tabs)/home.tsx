@@ -140,8 +140,8 @@ export default function Page() {
         ListFooterComponent={() => (
           <>
             <View className="flex flex-row items-center justify-between my-5 ">
-              <Text className="text-xl font-JakartaExtraBold">
-                Welcome{" "}
+              <Text className="text-2xl capitalize font-JakartaExtraBold">
+                Welcome{", "}
                 {user?.firstName ||
                   user?.emailAddresses[0].emailAddress.split("@")[0]}{" "}
               </Text>
