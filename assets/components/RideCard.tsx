@@ -65,7 +65,9 @@ const RideCard = ({
           <Text className="text-md font-JakartaMedium text-gray-500">
             Payment Status
           </Text>
-          <Text className="text-md font-JakartaMedium text-gray-500">
+          <Text
+            className={`text-md font-JakartaMedium text-gray-500 ${payment_status === "paid" ? "text-green-500" : "text-red-500"}`}
+          >
             {driver.payment_status}
           </Text>
         </View>
