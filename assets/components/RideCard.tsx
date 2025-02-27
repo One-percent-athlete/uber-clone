@@ -49,6 +49,9 @@ const RideCard = ({
             {formatDate(created_at)}, {formatTime(ride_time)}
           </Text>
         </View>
+        <View className="flex flex-row items-center justify-between w-full mb-5">
+            <Text></Text>
+        </View>
       </View>
     </View>
   </View>
