@@ -1,4 +1,5 @@
 import { icons } from "@/constants";
+import { formatDate } from "@/lib/utils";
 import { Ride } from "@/types/type";
 import { View, Text } from "react-native";
 
