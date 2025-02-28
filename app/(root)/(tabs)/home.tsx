@@ -168,6 +168,10 @@ export default function Page() {
               containerStyle="bg-white shadow-md shadow-neutral-300"
               handlePress={handleDestinationPress}
             />
+
+            <>
+              <Text className="text-xl font-JakartaBold mt-5 mb-3">Your Current Location</Text>
+            </>
           </>
         )}
       />
