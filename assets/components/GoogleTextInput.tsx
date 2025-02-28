@@ -2,7 +2,7 @@ import { Text, View } from "react-native"
 
 const GoogleTextInput = () => (
   <View>
-    <Text>GoogleTextInput</Text>
+    <Text>Search</Text>
   </View>
 )
 

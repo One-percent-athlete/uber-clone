@@ -1,3 +1,4 @@
+import GoogleTextInput from "@/assets/components/GoogleTextInput";
 import RideCard from "@/assets/components/RideCard";
 import { icons, images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
@@ -152,6 +153,8 @@ export default function Page() {
                 <Image source={icons.out} className="w-4 h-4" />
               </TouchableOpacity>
             </View>
+
+            <GoogleTextInput />
           </>
         )}
       />
