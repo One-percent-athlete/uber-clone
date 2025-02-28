@@ -2,7 +2,13 @@ import GoogleTextInput from "@/assets/components/GoogleTextInput";
 import RideCard from "@/assets/components/RideCard";
 import { icons, images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
-import { FlatList, View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
+import {
+  FlatList,
+  View,
+  Text,
+  ActivityIndicator,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const recentRides = [
@@ -111,6 +117,9 @@ export default function Page() {
   const handleSignOut = () => {
 
   }
+  const handleDestinationPress = () => {
+
+  }
 
   return (
     <SafeAreaView className="bg-general-500">
@@ -135,7 +144,7 @@ export default function Page() {
             ) : (
               <ActivityIndicator size="small" color="#000" />
             )
-            }
+          }
           </View>
         )}
         ListFooterComponent={() => (
@@ -154,7 +163,11 @@ export default function Page() {
               </TouchableOpacity>
             </View>
 
-            <GoogleTextInput />
+            <GoogleTextInput
+              icon={icons.search}
+              containerStyle="bg-white shadow-md shadow-neutral-300"
+              handlePress={handleDestinationPress}
+            />
           </>
         )}
       />
