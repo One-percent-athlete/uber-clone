@@ -176,6 +176,11 @@ export default function Page() {
                 <Map />
               </View>
             </>
+
+            <Text className="text-xl font-JakartaBold mt-5 mb-3">Recent Rides</Text>
+            <Text className="text-sm text-neutral-500">Your recent rides will appear here.
+
+            </Text>
           </>
         )}
       />
