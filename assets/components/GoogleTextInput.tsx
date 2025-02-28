@@ -1,6 +1,13 @@
+import { GoogleInputProps } from "@/types/type"
 import { Text, View } from "react-native"
 
-const GoogleTextInput = () => (
+const GoogleTextInput = ({
+  icon,
+  initialLocation,
+  containerStyle,
+  textInputBackgroundColor,
+  handlePress,
+}: GoogleInputProps) => (
   <View>
     <Text>Search</Text>
   </View>
