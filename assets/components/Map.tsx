@@ -8,6 +8,8 @@ const Map = () => {
       className="w-full h-full rounded-2xl"
       tintColor="black"
       mapType="mutedStandard"
+      showsPointsOfInterest={false}
+
     >
       <Text className="text-white">Map</Text>
     </MapView>
