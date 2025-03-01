@@ -1,10 +1,11 @@
-import { View, Text } from "react-native';
+import { View, Text } from "react-native";
+import MapView from "react-native-maps";
 
 const Map = () => {
   return (
-    <View className="flex-1 bg-red-500">
+    <MapView className="flex-1 bg-red-500">
       <Text className="text-white">Map</Text>
-    </View>
+    </MapView>
 );
 }
 export default Map
