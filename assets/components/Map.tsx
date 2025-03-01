@@ -13,6 +13,8 @@ const Map = () => {
       mapType="mutedStandard"
       showsPointsOfInterest={false}
       initialRegion={region}
+      showsUserLocation={true}
+      userInterfaceStyle="light"
     >
       <Text className="text-white">Map</Text>
     </MapView>
