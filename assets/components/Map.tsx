@@ -5,7 +5,9 @@ const Map = () => {
   return (
     <MapView
       provider={PROVIDER_DEFAULT}
-      className="flex-1 w-full h-full rounded-2xl"
+      className="w-full h-full rounded-2xl"
+      tintColor="black"
+      mapType="mutedStandard"
     >
       <Text className="text-white">Map</Text>
     </MapView>
