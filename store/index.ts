@@ -7,5 +7,7 @@ export const useLocationStore = create<LocationStore>((set) => ({
     userAddress: null,
     destinationLongitude: null,
     destinationLatitude: null,
+    destinationAddress: null,
+    setUserLocation: ({ latitude, longitude, address }: { latitude: number, longitude: number, address: string })
 　})
 );
