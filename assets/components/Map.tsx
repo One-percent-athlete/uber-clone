@@ -1,9 +1,12 @@
 import { View, Text } from "react-native";
-import MapView from "react-native-maps";
+import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
 
 const Map = () => {
   return (
-    <MapView className="flex-1 bg-red-500">
+    <MapView
+      provider={PROVIDER_DEFAULT}
+      className="flex-1 w-full h-full rounded-2xl"
+    >
       <Text className="text-white">Map</Text>
     </MapView>
 );
