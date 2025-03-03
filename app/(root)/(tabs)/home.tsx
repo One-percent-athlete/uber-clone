@@ -112,6 +112,7 @@ const recentRides = [
 ]
 
 export default function Page() {
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
   const loading = false;
 
