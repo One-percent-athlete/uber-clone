@@ -124,7 +124,11 @@ export default function Page() {
   const handleDestinationPress = () => {}
 
   useEffect(() => {
+    const requestLocaiton = async () => {
 
+    }
+
+    requestLocaiton();
   }, [])
 
   return (
