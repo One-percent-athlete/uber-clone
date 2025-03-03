@@ -117,6 +117,8 @@ export default function Page() {
   const { user } = useUser();
   const loading = false;
 
+  const [hasPermissition, setHasPermission] = useState(false);
+
   const handleSignOut = () => {
 
   }
