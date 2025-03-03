@@ -4,7 +4,7 @@ import RideCard from "@/assets/components/RideCard";
 import { icons, images } from "@/constants";
 import { useLocationStore } from "@/store";
 import { useUser } from "@clerk/clerk-expo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FlatList,
   View,
@@ -120,12 +120,12 @@ export default function Page() {
 
   const [hasPermissition, setHasPermission] = useState(false);
 
-  const handleSignOut = () => {
+  const handleSignOut = () => {}
+  const handleDestinationPress = () => {}
 
-  }
-  const handleDestinationPress = () => {
+  useEffect(() => {
 
-  }
+  }, [])
 
   return (
     <SafeAreaView className="bg-general-500">
