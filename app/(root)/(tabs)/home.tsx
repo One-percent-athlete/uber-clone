@@ -132,8 +132,13 @@ export default function Page() {
         setHasPermission(false);
         return;
       }
-
     }
+    let location = await Location.getCurrentPositionAsync();
+
+    const address = await Location.reverseGeocodeAsync({
+      latitude: location.coords?.latitude,
+      longitude: location.coords?.longitude,
+    });
 
     requestLocaiton();
   }, [])
