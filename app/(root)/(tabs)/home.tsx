@@ -2,6 +2,7 @@ import GoogleTextInput from "@/assets/components/GoogleTextInput";
 import Map from "@/assets/components/Map";
 import RideCard from "@/assets/components/RideCard";
 import { icons, images } from "@/constants";
+import { useLocationStore } from "@/store";
 import { useUser } from "@clerk/clerk-expo";
 import {
   FlatList,
