@@ -132,13 +132,20 @@ export default function Page() {
         setHasPermission(false);
         return;
       }
-    }
-    let location = await Location.getCurrentPositionAsync();
 
-    const address = await Location.reverseGeocodeAsync({
-      latitude: location.coords?.latitude,
-      longitude: location.coords?.longitude,
-    });
+      let location = await Location.getCurrentPositionAsync();
+
+      const address = await Location.reverseGeocodeAsync({
+        latitude: location.coords?.latitude,
+        longitude: location.coords?.longitude,
+      });
+
+      setUserLocation({
+        latitude: location.coords?.latitude,
+        longitude: location.coords?.longitude,
+        address: `${address[0].city}, ${address[0].region}`,
+      });
+    };
 
     requestLocaiton();
   }, [])
