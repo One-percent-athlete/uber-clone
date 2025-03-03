@@ -4,7 +4,7 @@ import { create } from "zustand";
 export const useLocationStore = create<LocationStore>((set) => ({
   userAddress: null,
   userLongitude: null,
-  userAddress: null,
+  userLatitude: null,
   destinationLongitude: null,
   destinationLatitude: null,
   destinationAddress: null,
@@ -22,5 +22,20 @@ export const useLocationStore = create<LocationStore>((set) => ({
       destinationLongitude: longitude,
       destinationAddress: address,
     }));
-  },
+  }, 
+  setDestinationLocation: ({
+    latitude,
+    longitude,
+    address,
+  }: {
+    latitude: number;
+    longitude: number;
+    address: string;
+  }) => {
+    set(() => ({
+      destinationLatitude: latitude,
+      destinationLongitude: longitude,
+      destinationAddress: address,
+    }));
+  }, 
 }));
