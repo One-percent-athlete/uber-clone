@@ -125,7 +125,7 @@ export default function Page() {
 
   useEffect(() => {
     const requestLocaiton = async () => {
-
+      let { status } = await Location.requestForegroundPermissionsAsync();
     }
 
     requestLocaiton();
