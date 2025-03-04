@@ -1,3 +1,4 @@
+import { calculateRegion } from "@/lib/map";
 import { useLocationStore } from "@/store";
 import { View, Text } from "react-native";
 import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
