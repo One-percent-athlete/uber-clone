@@ -10,6 +10,8 @@ const Map = () => {
     destinationLongitude,
     destinationLatitude,
   } = useLocationStore();
+
+  const { selectedDriver, setDrivers } = useLocationStore();
   
   const region = calculateRegion({
     userLatitude, 
