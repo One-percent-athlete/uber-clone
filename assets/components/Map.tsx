@@ -11,12 +11,12 @@ const Map = () => {
     destinationLatitude,
   } = useLocationStore();
   
-  const region = calculateRegion(
+  const region = calculateRegion({
     userLatitude, 
     userLongitude,
     destinationLatitude,
     destinationLongitude
-    );
+    });
 
   return (
     <MapView
