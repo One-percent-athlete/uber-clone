@@ -143,7 +143,7 @@ export default function Page() {
       setUserLocation({
         latitude: location.coords?.latitude,
         longitude: location.coords?.longitude,
-        address: `${address[0].city}, ${address[0].region}`,
+        address: `${address[0].name}, ${address[0].region}`,
       });
     };
 
