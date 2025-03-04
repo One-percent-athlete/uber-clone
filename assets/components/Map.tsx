@@ -4,9 +4,19 @@ import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
 
 const Map = () => {
   const {
-    userLongitude, userLatitude, destinationLongitude, destinationLatitude,
+    userLongitude,
+    userLatitude,
+    destinationLongitude,
+    destinationLatitude,
   } = useLocationStore();
-  const region = {}
+  
+  const region = calculateRegion(
+    userLatitude, 
+    userLongitude,
+    destinationLatitude,
+    destinationLongitude
+    );
+
   return (
     <MapView
       provider={PROVIDER_DEFAULT}
