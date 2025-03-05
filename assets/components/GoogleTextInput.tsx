@@ -1,5 +1,5 @@
-import { GoogleInputProps } from "@/types/type"
-import { Text, View } from "react-native"
+import { GoogleInputProps } from "@/types/type";
+import { Text, View } from "react-native";
 
 const GoogleTextInput = ({
   icon,
@@ -11,8 +11,22 @@ const GoogleTextInput = ({
   <View
     className={`flex flex-row items-center justify-center relative z-50 rounded-xl ${containerStyle} mb-5`}
   >
-    <Text>Search</Text>
+    <GoogleTextInput
+      handlePress={function ({
+        latitude,
+        longitude,
+        address,
+      }: {
+        latitude: number;
+        longitude: number;
+        address: string;
+      }): void {
+        throw new Error("Function not implemented.");
+      }}
+    >
+      Search
+    </GoogleTextInput>
   </View>
-)
+);
 
-export default GoogleTextInput
+export default GoogleTextInput;
