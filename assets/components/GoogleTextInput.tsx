@@ -1,3 +1,4 @@
+import { data } from "@/constants";
 import { GoogleInputProps } from "@/types/type";
 import { Text, View } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
@@ -12,8 +13,8 @@ const GoogleTextInput = ({
   <View
     className={`flex flex-row items-center justify-center relative z-50 rounded-xl ${containerStyle} mb-5`}
   >
-    <GooglePlacesAutocomplete 
-     fetchDetails={true}
+    <GooglePlacesAutocomplete
+      fetchDetails={true}
       placeholder="Where do you want to go?"
       debounce={200}
       styles={{
@@ -42,6 +43,9 @@ const GoogleTextInput = ({
           shadowColor: "#d4d4d4",
           zIndex: 99,
         }
+      }}
+      onPress={(data, details = null) => {
+        handlePress({})
       }}
     />
   </View>
