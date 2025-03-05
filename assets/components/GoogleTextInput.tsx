@@ -24,6 +24,15 @@ const GoogleTextInput = ({
           marginHorizontal: 20,
           position: "relative",
           shadowColor: "#d4d4d4",
+        },
+        textInput:{
+          backgroundColor: textInputBackgroundColor || "white",
+          fontSize: "16",
+          fontWeight: "600",
+          marginTop: 5,
+          width: "100%",
+          borderRadius: 200,
+          
         }
       }}
     />
