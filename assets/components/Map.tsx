@@ -1,3 +1,4 @@
+import { icons } from "@/constants";
 import { calculateRegion, generateMarkersFromData } from "@/lib/map";
 import { useLocationStore } from "@/store";
 import { MarkerData } from "@/types/type";
@@ -102,6 +103,9 @@ const Map = () => {
             longitude: marker.longitude,
           }}
           title={marker.title}
+          image={
+            selectedDriver === marker.id ? icons.selectedMarker : icons.marker
+          }
           description={marker.rating}
           pinColor={selectedDriver === marker.id ? "red" : "blue"}
         />
