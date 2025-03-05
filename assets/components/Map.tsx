@@ -79,6 +79,7 @@ const Map = () => {
         userLatitude,
         userLongitude,
       });
+      setMarkers(newMarkers)
     }
   }, [drivers]);
 
