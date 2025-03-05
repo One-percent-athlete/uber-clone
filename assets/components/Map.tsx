@@ -94,7 +94,18 @@ const Map = () => {
       showsUserLocation={true}
       userInterfaceStyle="light"
     >
-      <Text className="text-white">Map</Text>
+      {markers.map((marker) => (
+        <MapView.Marker
+          key={marker.id}
+          coordinate={{
+            latitude: marker.latitude,
+            longitude: marker.longitude,
+          }}
+          title={marker.title}
+          description={marker.rating}
+          pinColor={selectedDriver === marker.id ? "red" : "blue"}
+        />
+        ))}
     </MapView>
   );
 };
