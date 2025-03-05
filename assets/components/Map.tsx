@@ -106,10 +106,8 @@ const Map = () => {
           image={
             selectedDriver === marker.id ? icons.selectedMarker : icons.marker
           }
-          description={marker.rating}
-          pinColor={selectedDriver === marker.id ? "red" : "blue"}
         />
-        ))}
+      ))}
     </MapView>
   );
 };
