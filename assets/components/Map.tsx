@@ -1,6 +1,7 @@
 import { calculateRegion, generateMarkersFromData } from "@/lib/map";
 import { useLocationStore } from "@/store";
-import { useEffect } from "react";
+import { MarkerData } from "@/types/type";
+import { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
 
@@ -60,6 +61,7 @@ const Map = () => {
   } = useLocationStore();
 
   const { selectedDriver, setDrivers } = useLocationStore();
+  const [markers, setMarkers] = useState<MarkerData[]>([]);
 
   const region = calculateRegion({
     userLatitude,
