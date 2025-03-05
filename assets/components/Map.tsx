@@ -3,7 +3,7 @@ import { useLocationStore } from "@/store";
 import { MarkerData } from "@/types/type";
 import { useEffect, useState } from "react";
 import { View, Text } from "react-native";
-import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
+import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 
 const drivers = [
   {
@@ -95,7 +95,7 @@ const Map = () => {
       userInterfaceStyle="light"
     >
       {markers.map((marker) => (
-        <MapView.Marker
+        <Marker
           key={marker.id}
           coordinate={{
             latitude: marker.latitude,
