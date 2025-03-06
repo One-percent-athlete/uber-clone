@@ -138,7 +138,7 @@ export default function Page() {
   }) => {
     setDestinationLocation(location);
 
-    router.push("/(root)/find-rider");
+    router.push("/(root)/find-ride");
   };
 
   useEffect(() => {
