@@ -1,8 +1,10 @@
+import { View, Text } from 'react-native';
+
 const FindRide = () => {
   return (
-    <div>
-      <h1>Welcome to FindRide!</h1>
-    </div>
+    <View>
+      <Text></Text>
+    </View>
   );
 }
 
