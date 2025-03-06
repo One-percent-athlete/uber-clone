@@ -1,4 +1,4 @@
-import RideLayout from "@/assets/components/FindLayout";
+import RideLayout from "@/assets/components/RideLayout";
 import { useLocationStore } from "@/store";
 import { View, Text } from "react-native";
 
