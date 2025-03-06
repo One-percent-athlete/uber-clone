@@ -5,3 +5,5 @@ const FindRide = () => {
     </div>
   );
 }
+
+export default FindRide;
