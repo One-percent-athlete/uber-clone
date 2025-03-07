@@ -1,9 +1,11 @@
+import { Text, View } from "react-native";
+
 const ConfirmRide = () => {
-    return (
-        <div>
-            <h1>Confirm Ride</h1>
-        </div>
-    )
-}
+  return (
+    <View>
+      <Text>Confirm Ride</Text>
+    </View>
+  );
+};
 
 export default ConfirmRide;
