@@ -27,9 +27,10 @@ const RideLayout = ({
             <Text className="text-xl font-JakartaSemiBold ml-5">
               {title || "Go Back"}
             </Text>
-            <Map />
           </View>
+            <Map />
         </View>
+        <ButtomSheet />
       </View>
     </GestureHandlerRootView>
   );
