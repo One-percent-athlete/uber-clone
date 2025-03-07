@@ -10,6 +10,7 @@ const RideLayout = ({
   title: string;
   children: React.ReactNode;
 }) => {
+  const bottomSheet = useRef<BottomSheet>(null);
   return (
     <GestureHandlerRootView>
       <View className="flex-1 bg-white">
