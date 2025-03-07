@@ -1,4 +1,5 @@
 import { View, Text } from "react-native";
+import Gesture
 
 const RideLayout = ({ children }: { children: React.ReactNode }) => {
   return (
