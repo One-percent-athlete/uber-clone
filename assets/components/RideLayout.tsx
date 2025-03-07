@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
-import Gesture
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const RideLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <GestureHandleRootView className="flex flex-col h-full">
+    <GestureHandlerRootView className="flex flex-col h-full">
       {children}
-    </GestureHandleRootView>
+    </GestureHandlerRootView>
   );
 };
 
