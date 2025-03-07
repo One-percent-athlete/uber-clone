@@ -17,10 +17,20 @@ const FindRide = () => {
         <Text className="text-2xl font-JakartaSemiBold mb-3">From</Text>
         <GoogleTextInput
           icon={icons.target}
-          initialLocation={userAddress}
+          initialLocation={userAddress!}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="#f5f5f5"
           handlePress={(location) => setUserLocation(location)}
+        />
+      </View>
+      <View className="my-3">
+        <Text className="text-2xl font-JakartaSemiBold mb-3">To</Text>
+        <GoogleTextInput
+          icon={icons.map}
+          initialLocation={destinationAddress!}
+          containerStyle="bg-neutral-100"
+          textInputBackgroundColor="transparent"
+          handlePress={(location) => setDestinationLocation(location)}
         />
       </View>
     </RideLayout>
