@@ -1,3 +1,4 @@
+import CustomButton from "@/assets/components/CustomButton";
 import GoogleTextInput from "@/assets/components/GoogleTextInput";
 import RideLayout from "@/assets/components/RideLayout";
 import { icons } from "@/constants";
@@ -33,6 +34,11 @@ const FindRide = () => {
           handlePress={(location) => setDestinationLocation(location)}
         />
       </View>
+      <CustomButton
+        title="Find now"
+        onPress={() => router.push("/(root)/confirm-ride")}
+        className="mt-5"
+      />
     </RideLayout>
   );
 };
