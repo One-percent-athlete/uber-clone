@@ -1,4 +1,6 @@
-import { View, Text } from "react-native";
+import { icons } from "@/constants";
+import { router } from "expo-router";
+import { View, Text, TouchableOpacity } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const RideLayout = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +9,15 @@ const RideLayout = ({ children }: { children: React.ReactNode }) => {
       <View className="flex-1 bg-white">
         <View className="flex flex-col h-screen bg-blue-500">
           <View className="flex flex-row absolute z-10 top-16 items-center justify-start px-5">
-            
+            <TouchableOpacity onPress={() => router.back()}>
+              <View>
+                <Image
+                  source={icons.backArrow}
+                  resizeMode="contain"
+                  className="w-6 h-6"
+                />
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
