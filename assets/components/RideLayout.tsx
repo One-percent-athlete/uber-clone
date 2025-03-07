@@ -3,7 +3,13 @@ import { router } from "expo-router";
 import { View, Text, TouchableOpacity } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-const RideLayout = ({ children }: { children: React.ReactNode }) => {
+const RideLayout = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
   return (
     <GestureHandlerRootView>
       <View className="flex-1 bg-white">
@@ -18,6 +24,7 @@ const RideLayout = ({ children }: { children: React.ReactNode }) => {
                 />
               </View>
             </TouchableOpacity>
+            <Text>{title}</Text>
           </View>
         </View>
       </View>
