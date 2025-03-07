@@ -2,6 +2,9 @@ import { icons } from "@/constants";
 import { router } from "expo-router";
 import { View, Text, TouchableOpacity } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Map from "@/components/Map";
+import BottomSheet from "@/gorhom/bottom-sheet";
+import { useRef } from "react";
 
 const RideLayout = ({
   title,
@@ -10,7 +13,7 @@ const RideLayout = ({
   title: string;
   children: React.ReactNode;
 }) => {
-  const bottomSheet = useRef<BottomSheet>(null);
+  const bottomSheetRef = useRef<BottomSheet>(null);
   return (
     <GestureHandlerRootView>
       <View className="flex-1 bg-white">
@@ -29,9 +32,9 @@ const RideLayout = ({
               {title || "Go Back"}
             </Text>
           </View>
-            <Map />
+          <Map />
         </View>
-        <BottomSheet />
+        <BottomSheet ref={bottomSheetRef} snapPoints={["40%", "85%"]} />
       </View>
     </GestureHandlerRootView>
   );
