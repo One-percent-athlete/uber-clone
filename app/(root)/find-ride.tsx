@@ -7,7 +7,11 @@ const FindRide = () => {
     useLocationStore();
   return (
     <RideLayout>
-      <Text className="text-2xl"></Text>
+      <Text className="text-2xl">Find Ride</Text>
+      <Text className="text-2xl">Find Ride</Text>
+      <Text className="text-2xl">Find Ride</Text>
+      <Text className="text-2xl">Find Ride</Text>
+      <Text className="text-2xl">Find Ride</Text>
     </RideLayout>
   );
 }

@@ -3,7 +3,7 @@ import { router } from "expo-router";
 import { View, Text, TouchableOpacity } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Map from "@/components/Map";
-import BottomSheet from "@/gorhom/bottom-sheet";
+import BottomSheet, { BottomSheetScrollView } from "@/gorhom/bottom-sheet";
 import React, { useRef } from "react";
 
 const RideLayout = ({
