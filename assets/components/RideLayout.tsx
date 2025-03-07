@@ -30,7 +30,7 @@ const RideLayout = ({
           </View>
             <Map />
         </View>
-        <ButtomSheet />
+        <BottomSheet />
       </View>
     </GestureHandlerRootView>
   );
