@@ -1,3 +1,4 @@
+import DriverCard from "@/assets/components/DriverCard";
 import RideLayout from "@/assets/components/RideLayout";
 import { FlatList, Text, View } from "react-native";
 
@@ -51,9 +52,10 @@ const drivers = [
 const ConfirmRide = () => {
   return (
     <RideLayout title="Choose a Driver" snapPoints={["65%", "85%"]}>
-      <FlatList data={drivers} renderItem={({item}) => (
-        <DriverCard driver={item} />
-      )} />
+      <FlatList
+        data={drivers}
+        renderItem={({ item }) => <DriverCard driver={item} />}
+      />
     </RideLayout>
   );
 };
