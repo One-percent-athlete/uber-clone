@@ -55,6 +55,7 @@ const ConfirmRide = () => {
       <FlatList
         data={drivers}
         renderItem={({ item }) => <DriverCard item={item} />}
+        ListFooterComponent={}
       />
     </RideLayout>
   );

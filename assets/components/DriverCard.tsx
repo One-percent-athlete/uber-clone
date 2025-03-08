@@ -3,7 +3,7 @@ import { View } from "react-native";
 
 const DriverCard = ({ itme }: RiderCardProps) => (
   <View>
-    <Text></Text>
+    <Text>Driver</Text>
   </View>
 );
 
