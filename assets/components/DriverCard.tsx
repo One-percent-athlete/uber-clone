@@ -1,5 +1,5 @@
 
 
-const DriverCard = (props: DriverCardProps) => ()
+const DriverCard = ({ itme } : RiderCardProps) => ()
 
 export default DriverCard;
