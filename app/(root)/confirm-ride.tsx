@@ -54,7 +54,7 @@ const ConfirmRide = () => {
     <RideLayout title="Choose a Driver" snapPoints={["65%", "85%"]}>
       <FlatList
         data={drivers}
-        renderItem={({ item }) => <DriverCard driver={item} />}
+        renderItem={({ item }) => <DriverCard item={item} />}
       />
     </RideLayout>
   );
