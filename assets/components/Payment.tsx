@@ -1,10 +1,18 @@
 import { View, Text } from "react-native";
+import CustomButton from "./CustomButton";
 
 const Payment = () => {
+  const openPaymenSheet = () => {
+    console.log("Payment Sheet Opened");
+  };
   return (
-    <View>
-      <Text>Payment</Text>
-    </View>
+    <>
+      <CustomButton
+        title="Confirm Ride"
+        className="my-10"
+        onPress={openPaymenSheet}
+      />
+    </>
   );
 };
 
