@@ -1,10 +1,10 @@
-import { useUser } from "@clerk/clerk-expo";
 import { Image, Text, View } from "react-native";
 
 import RideLayout from "@/components/RideLayout";
 import { icons } from "@/constants";
 import { formatTime } from "@/lib/utils";
 import { useDriverStore, useLocationStore } from "@/store";
+import Payment from "@/assets/components/Payment";
 
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
@@ -83,6 +83,8 @@ const BookRide = () => {
             </Text>
           </View>
         </View>
+
+        <Payment />
       </>
     </RideLayout>
   );
