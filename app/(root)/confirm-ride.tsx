@@ -1,6 +1,7 @@
 import CustomButton from "@/assets/components/CustomButton";
 import DriverCard from "@/assets/components/DriverCard";
 import RideLayout from "@/assets/components/RideLayout";
+import { router } from "expo-router";
 import { FlatList, Text, View } from "react-native";
 
 const drivers = [
@@ -56,9 +57,16 @@ const ConfirmRide = () => {
       <FlatList
         data={drivers}
         renderItem={({ item }) => <DriverCard item={item} />}
-        ListFooterComponent={() => <View className="mx-5 mt-10">
-            <CustomButton title="Select Ride" />
-        </View>}
+        ListFooterComponent={() => (
+          <View className="mx-5 mt-10">
+            <CustomButton
+              title="Select Ride"
+              onPress={() => {
+                router.push("/(root)/book-ride");
+              }}
+            />
+          </View>
+        )}
       />
     </RideLayout>
   );
