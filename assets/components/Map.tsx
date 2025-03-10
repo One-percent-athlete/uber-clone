@@ -1,6 +1,6 @@
 import { icons } from "@/constants";
 import { calculateRegion, generateMarkersFromData } from "@/lib/map";
-import { useLocationStore } from "@/store";
+import { useDriverStore, useLocationStore } from "@/store";
 import { MarkerData } from "@/types/type";
 import { useEffect, useState } from "react";
 import { View, Text } from "react-native";
@@ -61,7 +61,7 @@ const Map = () => {
     destinationLatitude,
   } = useLocationStore();
 
-  const { selectedDriver, setDrivers } = useLocationStore();
+  const { selectedDriver, setDrivers } = useDriverStore();
   const [markers, setMarkers] = useState<MarkerData[]>([]);
 
   const region = calculateRegion({
