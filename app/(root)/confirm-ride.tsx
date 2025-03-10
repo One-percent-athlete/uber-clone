@@ -1,3 +1,4 @@
+import CustomButton from "@/assets/components/CustomButton";
 import DriverCard from "@/assets/components/DriverCard";
 import RideLayout from "@/assets/components/RideLayout";
 import { FlatList, Text, View } from "react-native";
@@ -55,9 +56,9 @@ const ConfirmRide = () => {
       <FlatList
         data={drivers}
         renderItem={({ item }) => <DriverCard item={item} />}
-        ListFooterComponent={(
-            <View></View>
-        )}
+        ListFooterComponent={() => <View className="mx-5 mt-10">
+            <CustomButton title="Select Ride" />
+        </View>}
       />
     </RideLayout>
   );
