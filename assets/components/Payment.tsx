@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
 
 const Payment = () => {
-  const openPaymenSheet = () => {
+  const openPaymenSheet = async () => {
     console.log("Payment Sheet Opened");
   };
   return (
