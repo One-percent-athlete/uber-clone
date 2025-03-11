@@ -87,6 +87,7 @@ const BookRide = () => {
         <Payment />
       </>
     </RideLayout>
+    <StripeProvider publishableKey="pk_test_51J3 />
   );
 };
 
