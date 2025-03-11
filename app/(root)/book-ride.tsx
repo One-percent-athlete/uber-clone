@@ -5,6 +5,7 @@ import { icons } from "@/constants";
 import { formatTime } from "@/lib/utils";
 import { useDriverStore, useLocationStore } from "@/store";
 import Payment from "@/assets/components/Payment";
+import { useState } from "react";
 
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
