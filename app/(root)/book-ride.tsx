@@ -10,6 +10,8 @@ const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
   const { drivers, selectedDriver } = useDriverStore();
 
+  const[publishableKey, setPublishableKey] = useState("");
+
   const driverDetails = drivers?.filter(
     (driver) => +driver.id === selectedDriver,
   )[0];
