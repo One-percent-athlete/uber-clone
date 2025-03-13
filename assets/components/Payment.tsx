@@ -1,8 +1,11 @@
 import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
+import { useStripe } from "@stripe/stripe-react-native";
+import { stripePublishableKey } from "@/config";
+
+
 
 const Payment = () => {
-  import { useStripe } from "@stripe/stripe-react-native";
 
   export default function CheckoutScreen() {
     const { initPaymentSheet, presentPaymentSheet } = useStripe();
