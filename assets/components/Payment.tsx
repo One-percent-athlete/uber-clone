@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Alert } from "react-native";
 import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
 import { useEffect, useState } from "react";
@@ -21,7 +21,13 @@ const Payment = () => {
       },
     });
     if (error) {
-      console.error(error);
+     if (error.code === PaymentSheetErrorCode.Canceled) {
+        Alert.alert(`Error code : ${error.code}`, error.message);
+      } else {
+
+      }
+    } else {
+
     }
   };
 
