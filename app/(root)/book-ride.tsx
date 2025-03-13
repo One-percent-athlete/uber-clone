@@ -13,6 +13,10 @@ const BookRide = () => {
 
   const[publishableKey, setPublishableKey] = useState("");
 
+  const fetchPublishableKey = async () => {
+    const key = await fetchKey();
+    setPublishableKey(key)
+
   const driverDetails = drivers?.filter(
     (driver) => +driver.id === selectedDriver,
   )[0];
@@ -86,12 +90,12 @@ const BookRide = () => {
             </Text>
           </View>
         </View>
-
         <Payment />
       </>
     </RideLayout>
     <StripeProvider publishableKey="pk_test_51J3" />
   );
 };
+}
 
 export default BookRide;
