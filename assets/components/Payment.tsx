@@ -9,7 +9,15 @@ const Payment = () => {
   const [success, setSuccess] = useState(false);
 
   const initializePaymentSheet = async () => {
-    const { error } = await initPaymentSheet()
+    const { error } = await initPaymentSheet({
+      merchantDisplayName: "RideHailing",
+      intentConfigurations: {
+        mode: {
+          amount: 1000,
+          currencyCode: "usd",
+        },
+      },
+    });
   };
 
   return (
