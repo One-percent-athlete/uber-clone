@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
 import { useEffect, useState } from "react";
+import { useLocationStore } from "@/store";
 
 const Payment = () => {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
