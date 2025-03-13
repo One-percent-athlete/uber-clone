@@ -14,10 +14,19 @@ const Payment = () => {
       intentConfigurations: {
         mode: {
           amount: 1000,
-          currencyCode: "usd",
+          currencyCode: "USD",
         },
+        confirmHandler: confirmHandler,
       },
     });
+    if (error) {
+      console.error(error);
+    }
+  };
+
+  const confirmHandler = async (paymentSheetResult) => {
+    setSuccess(true);
+    console.log(paymentSheetResult);
   };
 
   return (
