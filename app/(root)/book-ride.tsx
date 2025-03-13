@@ -5,7 +5,7 @@ import { icons } from "@/constants";
 import { formatTime } from "@/lib/utils";
 import { useDriverStore, useLocationStore } from "@/store";
 import Payment from "@/assets/components/Payment";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
@@ -20,6 +20,9 @@ const BookRide = () => {
   const driverDetails = drivers?.filter(
     (driver) => +driver.id === selectedDriver,
   )[0];
+
+  useEffect(() => {
+    fetchPublishableKey();}, []);
 
   return (
     <RideLayout title="Book Ride">
