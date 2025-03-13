@@ -8,7 +8,9 @@ const Payment = () => {
   const { userAddress, destinationAddress } = useLocationStore();
   const [success, setSuccess] = useState(false);
 
-  
+  const initializePaymentSheet = async () => {
+    const { error } = await initPaymentSheet()
+  };
 
   return (
     <>
