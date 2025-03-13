@@ -2,6 +2,8 @@ import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
 import { stripePublishableKey } from "@/config";
+import { useEffect, useState } from "react";
+import { useLocationStore } from "@/store";
 
 
 
