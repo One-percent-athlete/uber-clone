@@ -24,8 +24,7 @@ const Payment = () => {
       if (error.code === PaymentSheetErrorCode.Canceled) {
         Alert.alert(`Error code : ${error.code}`, error.message);
       } else {
-        setSuccess(false);
-        Alert.alert(`Error code : ${error.code}`, error.message);
+        setSuccess(true);
       }
     } else {
     }

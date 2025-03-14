@@ -16,6 +16,7 @@ const BookRide = () => {
   const fetchPublishableKey = async () => {
     const key = await fetchKey();
     setPublishableKey(key)
+  }
 
   const driverDetails = drivers?.filter(
     (driver) => +driver.id === selectedDriver,
@@ -23,8 +24,10 @@ const BookRide = () => {
 
   useEffect(() => {
     fetchPublishableKey();}, []);
-
+  };
   return (
+    <StripProvider publishableKey="pk_test_51J3">
+
     <RideLayout title="Book Ride">
       <>
         <Text className="text-xl font-JakartaSemiBold mb-3">
@@ -96,9 +99,10 @@ const BookRide = () => {
         <Payment />
       </>
     </RideLayout>
-    <StripeProvider publishableKey="pk_test_51J3" />
-  );
-};
+    <StripeProvider />
+    );
+  };
 }
+
 
 export default BookRide;
