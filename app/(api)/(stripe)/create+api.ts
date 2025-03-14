@@ -2,6 +2,11 @@ import { Stripe } from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
+export async function POST(request: Request {
+    const body = await request.json();
+    const args = { name, email, amount } = body;
+})
+
 app.post("/create-intent", async (req, res) => {
   try {
     var args = {
