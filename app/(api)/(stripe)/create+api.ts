@@ -13,6 +13,10 @@ export async function POST(request: Request) {
       }),
     );
   }
+
+  let customer;
+
+  const doesCustomerExist = await stripe.customers.list({ email });
 }
 
 app.post("/create-intent", async (req, res) => {
