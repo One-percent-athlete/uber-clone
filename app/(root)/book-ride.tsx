@@ -25,7 +25,10 @@ const BookRide = () => {
   useEffect(() => {
     fetchPublishableKey();}, []);
   return (
-    <StripProvider publishableKey="pk_test_51J3">
+    <StripProvider publishableKey={process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY!}
+      merchantIdnetifier="merchant.uber.com"
+      urlSchema="myapp"
+    >
 
     <RideLayout title="Book Ride">
       <>
