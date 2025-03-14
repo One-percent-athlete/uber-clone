@@ -17,6 +17,9 @@ export async function POST(request: Request) {
   let customer;
 
   const doesCustomerExist = await stripe.customers.list({ email });
+
+  if (doesCustomerExist) {
+    customer = doesCustomerExist.data[0];
 }
 
 app.post("/create-intent", async (req, res) => {
