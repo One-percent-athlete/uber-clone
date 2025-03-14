@@ -5,6 +5,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 export async function POST(request: Request {
     const body = await request.json();
     const args = { name, email, amount } = body;
+    if (!name || !email || !amount) {
+        return new Response(JSON.stringify({error: "Please enter a valid email address"}));
+    }
 })
 
 app.post("/create-intent", async (req, res) => {
