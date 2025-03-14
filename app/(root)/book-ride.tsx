@@ -24,7 +24,6 @@ const BookRide = () => {
 
   useEffect(() => {
     fetchPublishableKey();}, []);
-  };
   return (
     <StripProvider publishableKey="pk_test_51J3">
 
@@ -99,10 +98,9 @@ const BookRide = () => {
         <Payment />
       </>
     </RideLayout>
-    <StripeProvider />
-    );
-  };
-}
+    </StripeProvider>
+   );
+};
 
 
 export default BookRide;
