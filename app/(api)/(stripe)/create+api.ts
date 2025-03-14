@@ -16,10 +16,17 @@ export async function POST(request: Request) {
 
   let customer;
 
-  const doesCustomerExist = await stripe.customers.list({ email });
+  const existingCustomer = await stripe.customers.list({ email });
 
-  if (doesCustomerExist) {
-    customer = doesCustomerExist.data[0];
+  if (existingCustomer.data.length > 0) {
+    customer = existingCustomer.data[0];
+  } else {
+    const newCustomer = await stripe.customers.create({
+      name,
+      email,
+    });
+    customer = newCustomer;
+  }
 }
 
 app.post("/create-intent", async (req, res) => {
