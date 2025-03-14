@@ -21,13 +21,13 @@ const Payment = () => {
       },
     });
     if (error) {
-     if (error.code === PaymentSheetErrorCode.Canceled) {
+      if (error.code === PaymentSheetErrorCode.Canceled) {
         Alert.alert(`Error code : ${error.code}`, error.message);
       } else {
-
+        setSuccess(false);
+        Alert.alert(`Error code : ${error.code}`, error.message);
       }
     } else {
-
     }
   };
 
