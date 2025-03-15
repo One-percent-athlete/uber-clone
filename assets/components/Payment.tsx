@@ -6,8 +6,12 @@ import { useLocationStore } from "@/store";
 
 const Payment = () => {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
-  const { userAddress, destinationAddress } = useLocationStore();
   const [success, setSuccess] = useState(false);
+
+  const confirmHandler = async (paymentMethod, _, intentCreationCallback) => {
+    setSuccess(true);
+    console.log(paymentSheetResult);
+  };
 
   const initializePaymentSheet = async () => {
     const { error } = await initPaymentSheet({
@@ -28,11 +32,6 @@ const Payment = () => {
       }
     } else {
     }
-  };
-
-  const confirmHandler = async (paymentSheetResult) => {
-    setSuccess(true);
-    console.log(paymentSheetResult);
   };
 
   return (
