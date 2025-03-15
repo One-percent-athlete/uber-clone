@@ -9,6 +9,15 @@ const Payment = () => {
   const [success, setSuccess] = useState(false);
 
   const confirmHandler = async (paymentMethod, _, intentCreationCallback) => {
+    
+    const { paymentIntent, customer } = await fetchAPI("/(api)/(stripe)/create", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: 
+    })
+
     setSuccess(true);
     console.log(paymentSheetResult);
   };
