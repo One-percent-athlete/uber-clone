@@ -27,6 +27,11 @@ export async function POST(request: Request) {
     });
     customer = newCustomer;
   }
+
+  const ephemeraKey = await stripe.ephemeraKeys.create(
+    { customer: customer.id },
+    { apiVersion: "2020-08-07" },
+  );
 }
 
 app.post("/create-intent", async (req, res) => {
