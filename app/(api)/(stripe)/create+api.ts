@@ -34,7 +34,7 @@ export async function POST(request: Request) {
   );
 
   const paymentIntent = await stripe.paymentIntents.create({
-    amount: 1099,
+    amount: parseInt(amount) ** 100,
     currency: "eur",
     customer: customer.id,
     automatic_payment_methods: {
@@ -43,8 +43,8 @@ export async function POST(request: Request) {
   });
 
   res.json({
-    paymentIntent: paymentIntent.client_secret
-  })
+    paymentIntent: paymentIntent.client_secret,
+  });
 }
 
 app.post("/create-intent", async (req, res) => {
