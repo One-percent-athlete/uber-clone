@@ -3,8 +3,15 @@ import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
 import { useEffect, useState } from "react";
 import { useLocationStore } from "@/store";
+import { PaymentProps } from "@/types/type";
 
-const Payment = () => {
+const Payment = ({
+    fullName,
+    email,
+    amount,
+    driverId,
+    rideTime
+}: PaymentProps ) => {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
   const [success, setSuccess] = useState(false);
 
