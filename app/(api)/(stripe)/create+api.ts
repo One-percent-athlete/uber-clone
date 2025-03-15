@@ -44,6 +44,8 @@ export async function POST(request: Request) {
 
   res.json({
     paymentIntent: paymentIntent.client_secret,
+    ephemeraKey: ephemeraKey.secret,
+    customer: customer.id
   });
 }
 
