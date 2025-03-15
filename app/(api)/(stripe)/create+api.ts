@@ -32,6 +32,19 @@ export async function POST(request: Request) {
     { customer: customer.id },
     { apiVersion: "2020-08-07" },
   );
+
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 1099,
+    currency: "eur",
+    customer: customer.id,
+    automatic_payment_methods: {
+      enabled: true,
+    },
+  });
+
+  res.json({
+    paymentIntent: paymentIntent.client_secret
+  })
 }
 
 app.post("/create-intent", async (req, res) => {
