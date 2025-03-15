@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
   const { drivers, selectedDriver } = useDriverStore();
+  const { user } = useUser()
 
   const[publishableKey, setPublishableKey] = useState("");
 
@@ -98,7 +99,7 @@ const BookRide = () => {
             </Text>
           </View>
         </View>
-        <Payment />
+        <Payment fullName={user?.fullName!} email={user?.emailAddress[0].emailAddress!} amount={driverDetails?.price!} driverId={driverDetails?.id} rideTime={driverDetails?.time!} />
       </>
     </RideLayout>
     </StripeProvider>
