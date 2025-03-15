@@ -45,27 +45,10 @@ export async function POST(request: Request) {
 
   return Response(
     JSON.stringify({
-      paymentIntent: paymentIntent.client_secret,
-      ephemeraKey: ephemeraKey.secret,
+      paymentIntent: paymentIntent,
+      ephemeraKey: ephemeraKey,
       customer: customer.id,
-      publishableKey: "",
     }),
   );
 }
 
-app.post("/create-intent", async (req, res) => {
-  try {
-    var args = {
-      amount: 1099,
-      currency: "usd",
-      automatic_payment_method: { enable: true },
-    };
-
-    const intent = await stripe.paymentIntents.create(args);
-    res.json({
-      client_secret: intent.client_secret,
-    });
-  } catch (err) {
-    res.status(err.statusCode).json({ error: err.message });
-  }
-});
