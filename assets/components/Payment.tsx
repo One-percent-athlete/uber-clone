@@ -31,6 +31,10 @@ const Payment = ({
     })
   };
 
+  if (paymentIntent.client_secret) {
+    
+  }
+
   const initializePaymentSheet = async () => {
     const { error } = await initPaymentSheet({
       merchantDisplayName: "RideHailing",
