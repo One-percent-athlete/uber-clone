@@ -39,15 +39,18 @@ export async function POST(request: Request) {
     customer: customer.id,
     automatic_payment_methods: {
       enabled: true,
-      allow_redirects: "never"
+      allow_redirects: "never",
     },
   });
 
-  res.json({
-    paymentIntent: paymentIntent.client_secret,
-    ephemeraKey: ephemeraKey.secret,
-    customer: customer.id
-  });
+  return Response(
+    JSON.stringify({
+      paymentIntent: paymentIntent.client_secret,
+      ephemeraKey: ephemeraKey.secret,
+      customer: customer.id,
+      publishableKey: "",
+    }),
+  );
 }
 
 app.post("/create-intent", async (req, res) => {
