@@ -15,11 +15,10 @@ const Payment = () => {
         headers: {
             "Content-Type": "application/json",
         },
-        body: 
+        body: JSON.stringify(
+            name: fullName
+        )
     })
-
-    setSuccess(true);
-    console.log(paymentSheetResult);
   };
 
   const initializePaymentSheet = async () => {
