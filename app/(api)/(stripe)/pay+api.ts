@@ -8,9 +8,10 @@ export async function POST(request: Request) {
   if (!payment_methods_id || !payment_itent_id || !customer_id) {
     return new Response(
       JSON.stringify({
-        error: "Please enter a valid email address",
+        error: "Missing required payment information",
         status: 400,
       }),
     );
   }
+  
 }
