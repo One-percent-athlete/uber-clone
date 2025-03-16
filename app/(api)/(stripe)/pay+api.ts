@@ -13,5 +13,6 @@ export async function POST(request: Request) {
       }),
     );
   }
-  
+
+  const paymentMethod = await stripe.paymentMethods.attach()
 }
