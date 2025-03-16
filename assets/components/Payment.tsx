@@ -44,7 +44,11 @@ const Payment = ({
             customer_id: customer
         })
     })
+    if (result.client_secret) {
+        
+    }
   }
+
 
   const initializePaymentSheet = async () => {
     const { error } = await initPaymentSheet({
