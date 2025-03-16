@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const { name, email, amount } = body;
+  const { payment_methods_id, payment_itent_id, customer_id } = body;
   if (!name || !email || !amount) {
     return new Response(
       JSON.stringify({
@@ -13,3 +13,4 @@ export async function POST(request: Request) {
       }),
     );
   }
+}
