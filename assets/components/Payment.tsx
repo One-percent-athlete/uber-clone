@@ -40,7 +40,8 @@ const Payment = ({
         },
         body: JSON.stringify({
             payment_method_id: paymentMethod.id,
-            payment_intent_id: paymentIntent.id
+            payment_intent_id: paymentIntent.id,
+            customer_id: customer
         })
     })
   }
