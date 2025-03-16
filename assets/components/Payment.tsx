@@ -4,6 +4,7 @@ import { useStripe } from "@stripe/stripe-react-native";
 import { useEffect, useState } from "react";
 import { useLocationStore } from "@/store";
 import { PaymentProps } from "@/types/type";
+import { fetchAPI } from "@/lib/fetch";
 
 const Payment = ({
     fullName,
@@ -32,7 +33,16 @@ const Payment = ({
   };
 
   if (paymentIntent.client_secret) {
-    
+    const { result } = await fetchAPI("/api/(stripe)/pay", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            payment_method_id: paymentMethod.id,
+            payment_intent_id: paymentIntent.id
+        })
+    })
   }
 
   const initializePaymentSheet = async () => {
