@@ -15,6 +15,7 @@ const Payment = ({
 }: PaymentProps ) => {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
   const [success, setSuccess] = useState(false);
+  const { userAddress, userLatitude, userLongitude, destinationAddress, destinationLatitude, destinationLongitude } =useLocationStore()
 
   const confirmHandler = async (paymentMethod, _, intentCreationCallback) => {
     
@@ -45,7 +46,16 @@ const Payment = ({
         })
     })
     if (result.client_secret) {
-        
+        await fetchAPI("/(api)/ride/create", {
+          method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            originAddress: userAddress,
+
+        })
+        })
     }
   }
 
