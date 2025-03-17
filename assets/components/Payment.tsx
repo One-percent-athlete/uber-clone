@@ -52,8 +52,12 @@ const Payment = ({
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            originAddress: userAddress,
-
+            origin_address: userAddress,
+            origin_latitude: userLatitude,
+            origin_longitude: userLongitude,
+            destination_address: destinationAddress,
+            destination_latitude: destinationLatitude,
+            destination_longitude: destinationLongitude
         })
         })
     }
