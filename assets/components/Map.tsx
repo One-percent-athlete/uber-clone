@@ -110,7 +110,19 @@ const Map = () => {
             title="Destination"
             image={icons.pin}
           />
-          <MapViewDirections />
+          <MapViewDirections
+            origin={{
+              latitude: userLatitude!,
+              longitude: userLongitude!,
+            }}
+            destination={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude,
+            }}
+            apikey={process.env.EXPO_PUBLIC_GOOGLE_API_KEY}
+            strokeColor="#0286ff"
+            strokeWidth={2}
+          />
         </>
       )}
     </MapView>
