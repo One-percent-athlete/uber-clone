@@ -28,7 +28,7 @@ const Map = () => {
     userLongitude,
     destinationLatitude,
     destinationLongitude,
-  });
+  })
 
   useEffect(() => {
     if (Array.isArray(drivers)) {
@@ -51,7 +51,9 @@ const Map = () => {
         userLongitude,
         destinationLatitude,
         destinationLongitude,
-      });
+      }).then((drivers) => {
+        setDrivers(drivers as MarkerData[])
+      })
     }
   }, []);
 
