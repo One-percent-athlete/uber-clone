@@ -28,7 +28,7 @@ const Map = () => {
     userLongitude,
     destinationLatitude,
     destinationLongitude,
-  })
+  });
 
   useEffect(() => {
     if (Array.isArray(drivers)) {
@@ -52,8 +52,8 @@ const Map = () => {
         destinationLatitude,
         destinationLongitude,
       }).then((drivers) => {
-        setDrivers(drivers as MarkerData[])
-      })
+        setDrivers(drivers as MarkerData[]);
+      });
     }
   }, [markers, destinationLatitude, destinationLongitude]);
 
@@ -97,6 +97,18 @@ const Map = () => {
           }
         />
       ))}
+
+      {destinationLatitude && destinationLongitude && (
+        <>
+          <Marker
+            key="destination"
+            coordinate={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude,
+            }}
+          />
+        </>
+      )}
     </MapView>
   );
 };
