@@ -106,6 +106,8 @@ const Map = () => {
               latitude: destinationLatitude,
               longitude: destinationLongitude,
             }}
+            title="Destination"
+            image={icons.pin}
           />
         </>
       )}
