@@ -10,6 +10,7 @@ import { Driver, MarkerData } from "@/types/type";
 import { useEffect, useState } from "react";
 import { View, Text, ActivityIndicator } from "react-native";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
+import MapViewDirections from "react-native-maps-directions";
 
 const Map = () => {
   const { data: drivers, loading, error } = useFetch<Driver[]>("/(api)/driver");
@@ -109,6 +110,7 @@ const Map = () => {
             title="Destination"
             image={icons.pin}
           />
+          <MapViewDirections />
         </>
       )}
     </MapView>
