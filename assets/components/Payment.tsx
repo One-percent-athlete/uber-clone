@@ -1,4 +1,4 @@
-import { View, Text, Alert } from "react-native";
+import { View,Text, Alert } from "react-native";
 import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
 import { useEffect, useState } from "react";
@@ -112,6 +112,7 @@ const Payment = ({
       <ReactNativeModal isVisible={success} onBackdropPress={() => setSuccess(false)}>
         <View className="flex flex-col items-center justify-center bg-white p-7 rounded-2xl">
           <Image source={images.check} className="w-28 h-28 mt-5"/>
+          <Text className="text-2xl text-center font-JakartaBold mt-5">Ride Booked!</Text>
         </View>
       </ReactNativeModal>
     </>
