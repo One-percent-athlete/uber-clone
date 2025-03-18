@@ -86,12 +86,8 @@ const Payment = ({
       returnURL : "myapp//book-ride"
     });
     if (error) {
-      if (error.code === PaymentSheetErrorCode.Canceled) {
-        Alert.alert(`Error code : ${error.code}`, error.message);
-      } else {
-        setSuccess(true);
-      }
-    } else {
+      console.log(error);
+      
     }
   };
 
