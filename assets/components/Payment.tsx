@@ -57,7 +57,12 @@ const Payment = ({
             origin_longitude: userLongitude,
             destination_address: destinationAddress,
             destination_latitude: destinationLatitude,
-            destination_longitude: destinationLongitude
+            destination_longitude: destinationLongitude,
+            ride_time = rideTime.toFixed(0),
+            fare_price = parseInt(amount) * 100,
+            payment_status = "paid",
+            driver_id = driverId,
+            user_id = userId
         })
         })
     }
