@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import router from "expo-router";
+import { useFetch } from "@/lib/fetch";
 
 const recentRides = [
   {
@@ -126,7 +127,7 @@ const recentRides = [
 export default function Page() {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
-  const loading = false;
+  const { recentRides, loading } = useFetch(`/(api)/ride/${user?.id}`)
 
   const [hasPermissition, setHasPermission] = useState(false);
 
