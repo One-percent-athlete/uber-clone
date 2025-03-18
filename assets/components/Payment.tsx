@@ -6,6 +6,7 @@ import { useLocationStore } from "@/store";
 import { PaymentProps } from "@/types/type";
 import { fetchAPI } from "@/lib/fetch";
 import { useAuth } from "@clerk/clerk-expo";
+import { images } from "@/constants";
 
 const Payment = ({
     fullName,
@@ -107,6 +108,12 @@ const Payment = ({
         className="my-10"
         onPress={openPaymenSheet}
       />
+
+      <ReactNativeModal isVisible={success} onBackdropPress={() => setSuccess(false)}>
+        <View className="flex flex-col items-center justify-center bg-white p-7 rounded-2xl">
+          <Image source={images.check} className="w-28 h-28 mt-5"/>
+        </View>
+      </ReactNativeModal>
     </>
   );
 };
