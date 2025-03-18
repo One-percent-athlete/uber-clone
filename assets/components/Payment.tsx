@@ -22,10 +22,10 @@ const Payment = ({
 
   const initializePaymentSheet = async () => {
     const { error } = await initPaymentSheet({
-      merchantDisplayName: "RideHailing",
+      merchantDisplayName: "Ride Inc.",
       intentConfigurations: {
         mode: {
-          amount: 1000,
+          amount: parseInt(amount) * 100,
           currencyCode: "USD",
         },
         confirmHandler: async (paymentMethod, _, intentCreationCallback) => {
