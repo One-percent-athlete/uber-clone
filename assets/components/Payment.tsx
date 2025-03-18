@@ -67,6 +67,10 @@ const Payment = ({
             user_id = userId
         })
         })
+
+        intentCreationCallback({
+          clientSecret: result.client_secret
+        })
     }
   }
 
