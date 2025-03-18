@@ -85,9 +85,20 @@ const Payment = ({
     });
     if (error) {
       console.log(error);
-      
     }
   };
+
+  const openPaymenSheet = async () => {
+    await initializePaymentSheet()
+
+    const { error } = await presentPaymentSheet()
+
+    if (error) {
+      Alert.alert(`Error code : ${error.code}`, error.message)
+    } else {
+      setSuccess(true)
+    }
+  }
 
   return (
     <>
