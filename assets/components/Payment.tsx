@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useLocationStore } from "@/store";
 import { PaymentProps } from "@/types/type";
 import { fetchAPI } from "@/lib/fetch";
+import { useAuth } from "@clerk/clerk-expo";
 
 const Payment = ({
     fullName,
@@ -14,6 +15,7 @@ const Payment = ({
     rideTime
 }: PaymentProps ) => {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
+  const { userId } = useAuth();
   const [success, setSuccess] = useState(false);
   const { userAddress, userLatitude, userLongitude, destinationAddress, destinationLatitude, destinationLongitude } =useLocationStore()
 
