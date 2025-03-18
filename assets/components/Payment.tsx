@@ -83,6 +83,7 @@ const Payment = ({
         },
         confirmHandler: confirmHandler,
       },
+      returnURL : "myapp//book-ride"
     });
     if (error) {
       if (error.code === PaymentSheetErrorCode.Canceled) {
