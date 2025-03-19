@@ -5,6 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { ReactDOM, useEffect } from 'react';
 import 'react-native-reanimated';
+import { LogBox } from "react-native";
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo'
 import { tokenCache } from "@/lib/auth";
 
@@ -12,6 +13,8 @@ const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+LogBox.ignoreLogs(["Warning: ..."])
 
 export default function RootLayout(): React.JSX.Element | null {
   const [loaded] = useFonts({
