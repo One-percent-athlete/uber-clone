@@ -2,7 +2,7 @@ import * as SecureStore from 'expo-secure-store'
 import { Platform } from 'react-native'
 import { TokenCache } from '@clerk/clerk-expo/dist/cache'
 
-const createTokenCache = (): TokenCache => {
+export const tokenCache = (): TokenCache => {
   return {
     getToken: async (key: string) => {
       try {
@@ -25,5 +25,10 @@ const createTokenCache = (): TokenCache => {
   }
 }
 
-// SecureStore is not supported on the web
-export const tokenCache = Platform.OS !== 'web' ? createTokenCache() : undefined
+export const googleOAuth = async (startOAuthFlow: any) => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}

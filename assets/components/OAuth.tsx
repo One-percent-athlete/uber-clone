@@ -2,21 +2,13 @@ import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
 import { icons } from "@/constants";
 import { useAuth } from "@clerk/clerk-expo";
-import React from "react";
+import { useCallback } from "react";
 
 const OAuth = () => {
   const { startOAuthFlow } = useAuth({ strategy: "oauth_google" });
-  const onPress = React.useCallback(async () => {
+  const handleGoogleSignIn = useCallback(async () => {
     try {
-      const { createdSessionId, signIn, signUp, setActive } =
-        await startOAuthFlow({
-          redirectUrl: Linking.createURL("/dashboard", { scheme: "myapp" }),
-        });
-
-      if (createdSessionId) {
-        setActive!({ session: createdSessionId });
-      } else {
-      }
+      const result = await googleOAuth(startOAuthFlow)
     } catch (error) {
       console.log("OAuth Error", error);
     }
