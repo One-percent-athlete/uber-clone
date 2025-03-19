@@ -26,7 +26,8 @@ export default function Page() {
   const [hasPermissition, setHasPermission] = useState(false);
 
   const handleSignOut = () => {
-    signOut;
+    signOut();
+    router.replace("/(auth)/sign-in")
   };
   const handleDestinationPress = (location: {
     latitude: number;
