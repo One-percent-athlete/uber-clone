@@ -4,6 +4,7 @@ import { icons } from "@/constants";
 import { useAuth } from "@clerk/clerk-expo";
 import { useCallback } from "react";
 import { googleOAuth } from "@/lib/auth";
+import { router } from "expo-router";
 
 const OAuth = () => {
   const { startOAuthFlow } = useAuth({ strategy: "oauth_google" });
@@ -11,11 +12,9 @@ const OAuth = () => {
     try {
       const result = await googleOAuth(startOAuthFlow);
 
-      if (result.code === "session_exists") {
-        Alert.alert("success", "Session exists. Redirecting to homepage");
+      if (result.code === "session_exists" || result.code === "success") {
         router.push("/(root)/(tabs)/home");
       }
-      Alert.alert(result.success ? "Success" : "Error", result.message);
     } catch (error) {
       console.log("OAuth Error", error);
     }
