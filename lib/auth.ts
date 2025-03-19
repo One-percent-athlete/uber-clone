@@ -1,6 +1,7 @@
 import * as SecureStore from "expo-secure-store";
-import { Linking, Platform } from "react-native";
 import { TokenCache } from "@clerk/clerk-expo/dist/cache";
+import * as Linking from "expo-linking";
+import { fetchAPI } from "./fetch";
 
 export const tokenCache = (): TokenCache => {
   return {
@@ -27,13 +28,23 @@ export const tokenCache = (): TokenCache => {
 
 export const googleOAuth = async (startOAuthFlow: any) => {
   try {
-    const { createdSessionId, signOut, setActive } = await startOAuthFlow({
-      redirectUrl: Linking.createURL("/dashboard", { scheme: "myapp" }),
+    const { createdSessionId, signUp, setActive } = await startOAuthFlow({
+      redirectUrl: Linking.createURL("/(root)/tabs/home", { scheme: "myapp" }),
     });
     if (createdSessionId) {
-      setActive!({ session: createdSessionId });
-    } else {
-    }
+      if (setActive) {
+        await setActive!({ session: createdSessionId });
+
+        if (signUp.createdUserId) {
+          await fetchAPI("/(api)/user", {
+            method: "POST",
+            body: JSON.stringify({
+              name: `${signUp.firstName} ${signUp.lastName}`
+            })
+          })
+        }
+      }
+    } 
   } catch (error) {
     console.log(error);
   }
