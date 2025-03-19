@@ -6,7 +6,9 @@ import { useAuth } from "@clerk/clerk-expo";
 
 const OAuth = () => {
   const { startOAuthFlow } = useAuth({ strategy: "oauth_google"})
+  const onPress = React.useCallback(async () => {
 
+  }, [])
   return (
     <View>
       <View className="flex flex-row items-center justify-center mt-4 gap-x-3">
