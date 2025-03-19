@@ -1,14 +1,21 @@
-import { View, Text } from "react-native";
+import { View, Text, Alert } from "react-native";
 import CustomButton from "./CustomButton";
 import { icons } from "@/constants";
 import { useAuth } from "@clerk/clerk-expo";
 import { useCallback } from "react";
+import { googleOAuth } from "@/lib/auth";
 
 const OAuth = () => {
   const { startOAuthFlow } = useAuth({ strategy: "oauth_google" });
   const handleGoogleSignIn = useCallback(async () => {
     try {
-      const result = await googleOAuth(startOAuthFlow)
+      const result = await googleOAuth(startOAuthFlow);
+
+      if ( result.code === "session_exists" ) {
+        Alert.alert("success", "Session exists. Redirecting to homepage");
+        router.push("/(root)/(tabs)/home");
+      } 
+      Alert.alert(result.success ? "Success" : "Error", result.message)
     } catch (error) {
       console.log("OAuth Error", error);
     }

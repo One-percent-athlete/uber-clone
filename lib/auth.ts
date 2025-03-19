@@ -56,11 +56,11 @@ export const googleOAuth = async (startOAuthFlow: any) => {
       success: false,
       message: "An error ocurred."
     };
-  } catch (error) {
+  } catch (error: any) {
     console.log(error);
     return  {
       success: false,
-      message: "An error ocurred."
+      message: error?.errors[0]?.longMessage
     };
   }
 };
