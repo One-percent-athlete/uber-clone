@@ -3,7 +3,7 @@ import Map from "@/assets/components/Map";
 import RideCard from "@/assets/components/RideCard";
 import { icons, images } from "@/constants";
 import { useLocationStore } from "@/store";
-import { useUser } from "@clerk/clerk-expo";
+import { useAuth, useUser } from "@clerk/clerk-expo";
 import * as Location from "expo-location";
 import { useEffect, useState } from "react";
 import {
@@ -20,11 +20,14 @@ import { useFetch } from "@/lib/fetch";
 export default function Page() {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
+  const { signOut } = useAuth();
   const { recentRides, loading } = useFetch(`/(api)/ride/${user?.id}`)
 
   const [hasPermissition, setHasPermission] = useState(false);
 
-  const handleSignOut = () => {};
+  const handleSignOut = () => {
+    signOut;
+  };
   const handleDestinationPress = (location: {
     latitude: number;
     longitude: number;
