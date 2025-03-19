@@ -54,12 +54,14 @@ export const googleOAuth = async (startOAuthFlow: any) => {
     } 
     return {
       success: false,
+      code: "success",
       message: "An error ocurred."
     };
   } catch (error: any) {
     console.log(error);
     return  {
       success: false,
+      code: error.code,
       message: error?.errors[0]?.longMessage
     };
   }
