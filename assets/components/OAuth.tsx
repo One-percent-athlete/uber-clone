@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import CustomButton from "./CustomButton";
 import { icons } from "@/constants";
+import { useAuth } from "@clerk/clerk-expo";
 
 
 const OAuth = () => {
-  const handleGoogleSignIn = async (params:type) => {
-    
-  }
+  const { startOAuthFlow } = useAuth({ strategy: "oauth_google"})
+
   return (
     <View>
       <View className="flex flex-row items-center justify-center mt-4 gap-x-3">
