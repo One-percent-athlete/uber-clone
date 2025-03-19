@@ -42,12 +42,25 @@ export const googleOAuth = async (startOAuthFlow: any) => {
               name: `${signUp.firstName} ${signUp.lastName}`,
               email: signUp.email,
               clerkId: signUp.createdUserId
-            })
-          })
+            });
+          });
+        }
+        return {
+          success: true,
+          code: "success",
+          message: "You have successfully authenticated."
         }
       }
     } 
+    return {
+      success: false,
+      message: "An error ocurred."
+    };
   } catch (error) {
     console.log(error);
+    return  {
+      success: false,
+      message: "An error ocurred."
+    };
   }
 };
