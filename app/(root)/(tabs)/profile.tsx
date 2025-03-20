@@ -15,6 +15,16 @@ const Profile = () => {
       >
         <Text className="text-2xl font-JakartaBold my-5">My profile</Text>
 
+        <View className="flex items-center justify-center my-5">
+          <Image
+            source={{
+              uri: user?.externalAccounts[0]?.imageUrl ?? user?.imageUrl,
+            }}
+            style={{ width: 110, height: 110, borderRadius: 110 / 2 }}
+            className=" rounded-full h-[110px] w-[110px] border-[3px] border-white shadow-sm shadow-neutral-300"
+          />
+        </View>
+
         
       </ScrollView>
     </SafeAreaView>
