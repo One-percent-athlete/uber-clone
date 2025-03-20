@@ -53,7 +53,7 @@ const Profile = () => {
               editable={false}
             />
 
-<InputField
+            <InputField
               label="Phone"
               placeholder={user?.primaryPhoneNumber?.phoneNumber || "Not Found"}
               containerStyle="w-full"
