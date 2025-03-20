@@ -27,6 +27,14 @@ const Profile = () => {
 
         <View className="flex flex-col items-start justify-center bg-white rounded-lg shadow-sm shadow-neutral-300 px-5 py-3">
           <View className="flex flex-col items-start justify-start w-full">
+            <InputField
+              label="First name"
+              placeholder={user?.firstName || "Not Found"}
+              containerStyle="w-full"
+              inputStyle="p-3.5"
+              editable={false}
+            />
+
             
           </View>
         </View>
