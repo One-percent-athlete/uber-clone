@@ -53,7 +53,13 @@ const Profile = () => {
               editable={false}
             />
 
-            
+<InputField
+              label="Phone"
+              placeholder={user?.primaryPhoneNumber?.phoneNumber || "Not Found"}
+              containerStyle="w-full"
+              inputStyle="p-3.5"
+              editable={false}
+            />
           </View>
         </View>
       </ScrollView>
