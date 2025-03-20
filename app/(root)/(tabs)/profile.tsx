@@ -35,6 +35,14 @@ const Profile = () => {
               editable={false}
             />
 
+            <InputField
+              label="Last name"
+              placeholder={user?.lastName || "Not Found"}
+              containerStyle="w-full"
+              inputStyle="p-3.5"
+              editable={false}
+            />
+
             
           </View>
         </View>
