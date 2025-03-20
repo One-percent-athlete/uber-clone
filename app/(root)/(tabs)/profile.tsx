@@ -43,6 +43,16 @@ const Profile = () => {
               editable={false}
             />
 
+            <InputField
+              label="Email"
+              placeholder={
+                user?.primaryEmailAddress?.emailAddress || "Not Found"
+              }
+              containerStyle="w-full"
+              inputStyle="p-3.5"
+              editable={false}
+            />
+
             
           </View>
         </View>
