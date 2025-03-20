@@ -40,4 +40,4 @@ const InputField = ({
   </KeyboardAvoidingView>
 )
 
-export default InputField
+export default InputField;
