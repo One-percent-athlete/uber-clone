@@ -9,7 +9,8 @@ const Chat = () => {
             <ScrollView contentContainerStyle={{flexGrow: 1}}>
                 <Text className="text-2xl font-JakartaBold">Chat</Text>
                 <View className="flex-1 h-fit flex justify-center items-center">
-                    
+                    <Image />
+                        
                 </View>
             </ScrollView>
         </SafeAreaView>
