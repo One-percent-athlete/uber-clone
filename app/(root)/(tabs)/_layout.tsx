@@ -23,9 +23,9 @@ const TabIcon = ({
       />
     </View>
   </View>
-)
+);
 
-const layout = () =>(
+const layout = () => (
   <Tabs
     initialRouteName="index"
     screenOptions={{
@@ -44,10 +44,10 @@ const layout = () =>(
         justifyContent: "space-between",
         alignItems: "center",
         flexDirection: "row",
-        position: "absolute"
+        position: "absolute",
       },
     }}
-    >
+  >
     <Tabs.Screen
       name="home"
       options={{
@@ -56,7 +56,7 @@ const layout = () =>(
         tabBarIcon: ({ focused }) => (
           <TabIcon focused={focused} source={icons.home} />
         ),
-    }} 
+      }}
     />
     <Tabs.Screen
       name="rides"
@@ -66,7 +66,7 @@ const layout = () =>(
         tabBarIcon: ({ focused }) => (
           <TabIcon focused={focused} source={icons.list} />
         ),
-    }} 
+      }}
     />
     <Tabs.Screen
       name="chat"
@@ -76,7 +76,7 @@ const layout = () =>(
         tabBarIcon: ({ focused }) => (
           <TabIcon focused={focused} source={icons.chat} />
         ),
-    }} 
+      }}
     />
     <Tabs.Screen
       name="profile"
@@ -86,9 +86,9 @@ const layout = () =>(
         tabBarIcon: ({ focused }) => (
           <TabIcon focused={focused} source={icons.profile} />
         ),
-    }} 
+      }}
     />
   </Tabs>
-)
+);
 
 export default layout;
