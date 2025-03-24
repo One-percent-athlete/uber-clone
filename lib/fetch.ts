@@ -5,12 +5,12 @@ export const fetchAPI = async (url: string, options?: RequestInit) => {
     const response = await fetch(url, options);
     if (!response.ok) {
       new Error(`HTTP error! status: ${response.status}`);
-    }
+    };
     return await response.json();
   } catch (error) {
     console.error("Fetch error:", error);
     throw error;
-  }
+  };
 };
 
 export const useFetch = <T>(url: string, options?: RequestInit) => {
@@ -29,7 +29,7 @@ export const useFetch = <T>(url: string, options?: RequestInit) => {
       setError((err as Error).message);
     } finally {
       setLoading(false);
-    }
+    };
   }, [url, options]);
 
   useEffect(() => {

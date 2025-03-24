@@ -44,14 +44,14 @@ export const googleOAuth = async (startOAuthFlow: any) => {
               clerkId: signUp.createdUserId
             });
           });
-        }
+        };
         return {
           success: true,
           code: "success",
           message: "You have successfully authenticated."
-        }
-      }
-    } 
+        };
+      };
+    };
     return {
       success: false,
       code: "success",
@@ -64,5 +64,5 @@ export const googleOAuth = async (startOAuthFlow: any) => {
       code: error.code,
       message: error?.errors[0]?.longMessage
     };
-  }
+  };
 };
