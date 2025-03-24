@@ -1,12 +1,13 @@
 import { View,Text, Alert } from "react-native";
 import CustomButton from "./CustomButton";
 import { useStripe } from "@stripe/stripe-react-native";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocationStore } from "@/store";
 import { PaymentProps } from "@/types/type";
 import { fetchAPI } from "@/lib/fetch";
 import { useAuth } from "@clerk/clerk-expo";
 import { images } from "@/constants";
+import { router } from "expo-router";
 
 const Payment = ({
     fullName,
@@ -80,13 +81,13 @@ const Payment = ({
                 })
             }
           }
-        };,
+        };
       },
       returnURL : "myapp//book-ride"
     });
     if (error) {
       console.log(error);
-    }
+    };
   };
 
   const openPaymenSheet = async () => {
@@ -98,8 +99,8 @@ const Payment = ({
       Alert.alert(`Error code : ${error.code}`, error.message)
     } else {
       setSuccess(true)
-    }
-  }
+    };
+  };
 
   return (
     <>

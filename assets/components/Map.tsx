@@ -55,7 +55,7 @@ const Map = () => {
       }).then((drivers) => {
         setDrivers(drivers as MarkerData[]);
       });
-    }
+    };
   }, [markers, destinationLatitude, destinationLongitude]);
 
   if (loading || !userLatitude || !userLongitude) {
@@ -64,7 +64,7 @@ const Map = () => {
         <ActivityIndicator size="small" color="#000" />
       </View>
     );
-  }
+  };
 
   if (error) {
     return (
@@ -72,7 +72,7 @@ const Map = () => {
         <Text>Error: {error}</Text>
       </View>
     );
-  }
+  };
 
   return (
     <MapView
@@ -97,7 +97,7 @@ const Map = () => {
             selectedDriver === marker.id ? icons.selectedMarker : icons.marker
           }
         />
-      ))}
+      ))};
 
       {destinationLatitude && destinationLongitude && (
         <>
