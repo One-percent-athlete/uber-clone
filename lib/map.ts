@@ -42,7 +42,7 @@ export const calculateRegion = ({
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
-  }
+  };
 
   if (!destinationLatitude || !destinationLongitude) {
     return {
@@ -51,7 +51,7 @@ export const calculateRegion = ({
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
-  }
+  };
 
   const minLat = Math.min(userLatitude, destinationLatitude);
   const maxLat = Math.max(userLatitude, destinationLatitude);
@@ -117,5 +117,5 @@ export const calculateDriverTimes = async ({
     return await Promise.all(timesPromises);
   } catch (error) {
     console.error("Error calculating driver times:", error);
-  }
+  };
 };

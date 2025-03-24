@@ -19,8 +19,8 @@ export function formatTime(minutes: number): string {
     const hours = Math.floor(formattedMinutes / 60);
     const remainingMinutes = formattedMinutes % 60;
     return `${hours}h ${remainingMinutes}m`;
-  }
-}
+  };
+};
 
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -43,4 +43,4 @@ export function formatDate(dateString: string): string {
   const year = date.getFullYear();
 
   return `${day < 10 ? "0" + day : day} ${month} ${year}`;
-}
+};
