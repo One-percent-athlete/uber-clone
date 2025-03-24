@@ -12,7 +12,7 @@ export async function POST(request: Request) {
         status: 400,
       }),
     );
-  }
+  };S
 
   let customer;
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       email,
     });
     customer = newCustomer;
-  }
+  };
 
   const ephemeraKey = await stripe.ephemeraKeys.create(
     { customer: customer.id },
@@ -50,4 +50,4 @@ export async function POST(request: Request) {
       customer: customer.id,
     }),
   );
-}
+};

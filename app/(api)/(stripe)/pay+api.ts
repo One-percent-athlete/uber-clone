@@ -13,7 +13,7 @@ export async function POST(request: Request) {
           status: 400,
         }),
       );
-    }
+    };
 
     const paymentMethod = await stripe.paymentMethods.attach(
       payment_method_id,
@@ -41,5 +41,5 @@ export async function POST(request: Request) {
         status: 400,
       }),
     );
-  }
-}
+  };
+};
