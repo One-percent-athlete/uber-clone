@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       { error: "Missing required fields" },
       { status: 400 },
     );
-  }
+  };
 
   const response = await sql`
     INSERT INTO users (
@@ -28,5 +28,5 @@ export async function POST(request: Request) {
   return new Response(JSON.stringify{data: response}),{status: 200};
 
   try {
-  } catch (error) {}
-}
+  } catch (error) {};
+};

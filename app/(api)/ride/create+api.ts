@@ -34,7 +34,7 @@ export async function POST(request: Request) {
         { error: "Missing required fields" },
         { status: 400 },
       );
-    }
+    };
 
     const sql = neon(`${process.env.DATABASE_URL}`);
 
@@ -71,5 +71,5 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error inserting data into recent_rides:", error);
     return Response.json({ error: "Internal Server Error" }, { status: 500 });
-  }
-}
+  };
+};
