@@ -8,7 +8,7 @@ declare interface Driver {
   car_image_url: string;
   car_seats: number;
   rating: number;
-}
+};
 
 declare interface MarkerData {
   latitude: number;
@@ -23,7 +23,7 @@ declare interface MarkerData {
   last_name: string;
   time?: number;
   price?: string;
-}
+};
 
 declare interface MapProps {
   destinationLatitude?: number;
@@ -31,7 +31,7 @@ declare interface MapProps {
   onDriverTimesCalculated?: (driversWithTimes: MarkerData[]) => void;
   selectedDriver?: number | null;
   onMapReady?: () => void;
-}
+};
 
 declare interface Ride {
   origin_address: string;
@@ -52,7 +52,7 @@ declare interface Ride {
     last_name: string;
     car_seats: number;
   };
-}
+};
 
 declare interface ButtonProps extends TouchableOpacityProps {
   title: string;
@@ -61,7 +61,7 @@ declare interface ButtonProps extends TouchableOpacityProps {
   IconLeft?: React.ComponentType<any>;
   IconRight?: React.ComponentType<any>;
   className?: string;
-}
+};
 
 declare interface GoogleInputProps {
   icon?: string;
@@ -77,7 +77,7 @@ declare interface GoogleInputProps {
     longitude: number;
     address: string;
   }) => void;
-}
+};
 
 declare interface InputFieldProps extends TextInputProps {
   label: string;
@@ -88,7 +88,7 @@ declare interface InputFieldProps extends TextInputProps {
   inputStyle?: string;
   iconStyle?: string;
   className?: string;
-}
+};
 
 declare interface PaymentProps {
   fullName: string;
@@ -96,7 +96,7 @@ declare interface PaymentProps {
   amount: string;
   driverId: number;
   rideTime: number;
-}
+};
 
 declare interface LocationStore {
   userLatitude: number | null;
@@ -123,7 +123,7 @@ declare interface LocationStore {
     longitude: number;
     address: string;
   }) => void;
-}
+};
 
 declare interface DriverStore {
   drivers: MarkerData[];
@@ -131,10 +131,10 @@ declare interface DriverStore {
   setSelectedDriver: (driverId: number) => void;
   setDrivers: (drivers: MarkerData[]) => void;
   clearSelectedDriver: () => void;
-}
+};
 
 declare interface DriverCardProps {
   item: MarkerData;
   selected: number;
   setSelected: () => void;
-}
+};
