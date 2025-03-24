@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     },
   });
 
-  return Response(
+  return new Response(
     JSON.stringify({
       paymentIntent: paymentIntent,
       ephemeraKey: ephemeraKey,
@@ -51,4 +51,3 @@ export async function POST(request: Request) {
     }),
   );
 }
-
