@@ -9,7 +9,6 @@ import { router } from "expo-router";
 import { fetchAPI } from "@/lib/fetch";
 
 const SignUp = () => {
-
   const { isLoaded, signUp, setActive } = useSignUp();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -17,39 +16,38 @@ const SignUp = () => {
     name: "",
     email: "",
     password: "",
-  })
+  });
 
   const [verification, setVerification] = useState({
     state: "pending",
     error: "",
-    code: ""
+    code: "",
   });
   const onSignUpPress = async () => {
     if (!isLoaded) {
-      return
+      return;
     }
     try {
       await signUp.create({
         emailAddress: form.email,
         password: form.password,
-      })
+      });
       await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
       setVerification({
         ...verification,
         state: "pending",
-      })
+      });
     } catch (err) {
       Alert.alert("Error", err.errors[0].longMessage);
     }
-  }
+  };
   const onVerifyPress = async () => {
     if (!isLoaded) return;
     try {
       const signUpAttempt = await signUp.attemptEmailAddressVerification({
         code: verification.code,
-      })
+      });
       if (signUpAttempt.status === "complete") {
-
         await fetchAPI("/(api)/user", {
           method: "POST",
           body: JSON.stringify({
@@ -59,26 +57,26 @@ const SignUp = () => {
           }),
         });
 
-        await setActive({ session: signUpAttempt.createdSessionId })
+        await setActive({ session: signUpAttempt.createdSessionId });
         setVerification({
           ...verification,
           state: "success",
-        })
+        });
       } else {
         setVerification({
           ...verification,
           error: "Verification failed",
           state: "failed",
-        })
+        });
       }
     } catch (err: any) {
       setVerification({
         ...verification,
         error: err.error[0].longMessage,
         state: "failed",
-      })
+      });
     }
-  }
+  };
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="relative w-full h-[250px]">
@@ -145,7 +143,7 @@ const SignUp = () => {
           <Text className="font-Jakarta mb-5">
             We've sent a verification code to {form.email}.
           </Text>
-          <InputField 
+          <InputField
             label="Verification Code"
             icon={icons.lock}
             placeholder="123456"
@@ -157,7 +155,7 @@ const SignUp = () => {
             <Text className="text-red-500 text-sm mt-1">
               {verification.error}
             </Text>
-          )}
+          )};
 
           <CustomButton
             title="Verify Email"
@@ -182,7 +180,7 @@ const SignUp = () => {
             title="Browse Home"
             onPress={() => {
               setShowSuccessModal(false);
-              router.push("/(root)/(tabs)/home")
+              router.push("/(root)/(tabs)/home");
             }}
             className="mt-5"
           ></CustomButton>
